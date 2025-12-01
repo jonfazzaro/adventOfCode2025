@@ -21,8 +21,7 @@ describe('The dial', () => {
     });
 
     it('has no zero crossings', () => {
-      
-      
+      expect(dial.crossings).toEqual(0)
     });
 
     describe('then L10', () => {

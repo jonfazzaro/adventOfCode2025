@@ -1,10 +1,12 @@
 export class Dial {
   position: number;
+  crossings: number;
   private positions: number;
 
   private constructor() {
     this.position = 50;
     this.positions = 100;
+    this.crossings = 0;
   }
 
   static create() {

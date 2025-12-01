@@ -21,7 +21,6 @@ export class Dial {
 
   private calculateCrossings(delta: number, fromPosition: number) {
     if (delta <= 0) return this.calculateLeftCrossings(delta, fromPosition);
-    // Steps needed to reach 0 when moving right (clockwise)
     return this.calculateRightCrossings(delta, fromPosition);
   }
 

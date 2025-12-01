@@ -50,7 +50,7 @@ describe('The dial', () => {
       });
     });
 
-    describe.skip('then L50', () => {
+    describe('then L50', () => {
       beforeEach(() => {
         dial.turn(-50);
       });

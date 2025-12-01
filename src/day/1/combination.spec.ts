@@ -17,5 +17,11 @@ describe('The combination', () => {
     const combo = Combination.create()
     expect(combo.find(input.turns())).toEqual(3)
   });
+
+  it('solves the puzzle', () => {
+    const input = Input.create(puzzleInput)
+
+  });
 });
 
+const puzzleInput = ""

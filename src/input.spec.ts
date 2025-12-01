@@ -14,12 +14,13 @@ describe('The input', () => {
     });
   });
 
-  describe('given turn instructions', () => {
-    it('lists the turn values', () => {
+  describe.each([
+    ["R2\nL3", [-2, 3]]
+    ])('given turn instructions', () => {
+    it('lists the turn values', (input) => {
       const subject = Input.create("R2\nL3");
       expect(subject.turns()).toEqual([-2, 3])
     });
-
   });
 });
 

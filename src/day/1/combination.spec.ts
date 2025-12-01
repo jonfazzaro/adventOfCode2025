@@ -1,11 +1,10 @@
 import {Input} from "../../input.ts";
 import {Combination} from "./combination.ts";
-import {Dial} from "./dial.ts";
 
 describe('The combination', () => {
 
 
-  it.skip('is designed in this playground', () => {
+  it('is designed in this playground', () => {
     const input = Input.create("L68\n" +
       "L30\n" +
       "R48\n" +

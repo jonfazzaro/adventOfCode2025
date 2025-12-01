@@ -7,13 +7,19 @@ describe('The dial', () => {
 
   describe('given a R3', () => {
     it('has position 53', () => {
+
       const dial = new Dial();
       dial.turn(3);
       expect(dial.position).toEqual(53);
     });
 
     describe('then L10', () => {
-      it.todo('has position 43');
+      it('has position 43', () => {
+        const dial = new Dial();
+        dial.turn(3);
+        dial.turn(-10);
+        expect(dial.position).toEqual(43);
+      });
     });
   });
 

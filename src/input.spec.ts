@@ -1,7 +1,6 @@
 describe('The input', () => {
 
   it('should exist', () => {
-
     Input.create("")
   });
 });

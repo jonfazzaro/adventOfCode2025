@@ -27,7 +27,7 @@ export class Dial {
       // Steps needed to reach 0 when moving left
       const r = fromPosition === 0 ? this.positions : fromPosition;
       if (m >= r) {
-        crossings += Math.floor((m - r) / this.positions) + 1;
+        return Math.floor((m - r) / this.positions) + 1;
       }
     } else {
       // Steps needed to reach 0 when moving right (clockwise)

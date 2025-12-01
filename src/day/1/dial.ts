@@ -7,6 +7,10 @@ export class Dial {
     this.positions = 100;
   }
 
+  static create() {
+    return new Dial();
+  }
+
   turn(number: number) {
     this.position = this.wrap(this.position + number);
   }

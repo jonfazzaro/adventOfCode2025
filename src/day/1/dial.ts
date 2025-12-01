@@ -12,8 +12,7 @@ export class Dial {
   }
 
   private wrap(n: number) {
-    const m = this.positions;
-    return ((n % m) + m) % m;
+    return ((n % this.positions) + this.positions) % this.positions;
   }
 }
 

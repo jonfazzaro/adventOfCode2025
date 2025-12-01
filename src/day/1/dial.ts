@@ -33,7 +33,7 @@ export class Dial {
   }
 
   private calculateRightCrossings(clicks: number, fromPosition: number) {
-    const distanceToZero = fromPosition === 0 ? this.positions : this.positions - fromPosition;
+    const distanceToZero = this.distanceToZero(fromPosition, clicks);
     if (clicks < distanceToZero)
       return 0;
     return Math.floor((clicks - distanceToZero) / this.positions) + 1;

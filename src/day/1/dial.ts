@@ -39,6 +39,10 @@ export class Dial {
     return Math.floor((clicks - distanceToZero) / this.positions) + 1;
   }
 
+  private distanceToZero(position: number) {
+    return position === 0 ? this.positions : this.positions - position;
+  }
+
   private wrap(n: number) {
     return modulo(n, this.positions);
 

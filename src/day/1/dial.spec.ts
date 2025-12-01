@@ -44,7 +44,7 @@ describe('The dial', () => {
       expect(dial.position).toEqual(0);
     });
 
-    describe('then L23', () => {
+    describe('then left 23', () => {
       beforeEach(() => {
         dial.turn(-23);
       });

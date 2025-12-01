@@ -30,9 +30,7 @@ export class Dial {
   private calculateLeftCrossings(delta: number, fromPosition: number) {
     const m = -delta;
     const r = fromPosition === 0 ? this.positions : fromPosition;
-    if (m < r) {
-      return 0;
-    }
+    if (m < r) return 0;
     return Math.floor((m - r) / this.positions) + 1;
   }
 

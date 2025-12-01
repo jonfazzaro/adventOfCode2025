@@ -11,16 +11,10 @@ describe('The combination', () => {
     expect(dial.crossings).toEqual(6);
   });
 
-  function arrange(data: string) {
-    const input = Input.create(data)
+  it('solves the puzzle', () => {
+    const input = Input.create(puzzleInput)
     const dial = Dial.create();
     const combo = Combination.create(dial);
-    return {input, dial, combo};
-  }
-
-  it('solves the puzzle', () => {
-    const data = puzzleInput;
-    const {input, dial, combo} = arrange(data);
     expect(combo.find(input.turns())).toEqual(1086)
     expect(dial.crossings).toEqual(6268);
   });

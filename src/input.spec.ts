@@ -8,6 +8,6 @@ describe('The input', () => {
 
 class Input {
   static create(input: string) {
-    return input;
+    return new Input(input);
   }
 }

@@ -8,6 +8,7 @@ describe('The combination', () => {
     dial = Dial.create();
     combo = Combination.create(dial);
   });
+  
   it('is designed in this playground', () => {
     const input = Input.create(exampleInput);
     expect(combo.find(input.turns())).toEqual(3)

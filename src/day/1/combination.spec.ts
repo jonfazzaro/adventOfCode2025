@@ -14,13 +14,13 @@ describe('The combination', () => {
       "R14\n" +
       "L82");
 
-    const combo = Combination.create()
+    const combo = Combination.create();
     expect(combo.find(input.turns())).toEqual(3)
   });
 
   it('solves the puzzle', () => {
     const input = Input.create(puzzleInput)
-    const combo = Combination.create()
+    const combo = Combination.create();
     expect(combo.find(input.turns())).toEqual(1086)
   });
 });

@@ -1,14 +1,10 @@
 import {Dial} from "./dial.ts";
 
 describe('The dial', () => {
-  it('exists', () => {
-    new Dial()
-  });
-
   it('starts at position 50', () => {
     expect(new Dial().position).toEqual(50)
   });
-  
+
   describe('given a R3', () => {
     it.todo('has position 53');
     describe('then L10', () => {

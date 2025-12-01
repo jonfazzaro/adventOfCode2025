@@ -5,7 +5,9 @@ describe('The dial', () => {
     new Dial()
   });
 
-  it.todo('starts at position 50');
+  it('starts at position 50', () => {
+    expect(new Dial().position).toEqual(50)
+  });
   describe('given a R3', () => {
     it.todo('has position 53');
     describe('then L10', () => {

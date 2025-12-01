@@ -5,6 +5,7 @@ describe('The dial', () => {
   beforeEach(() => {
     dial = new Dial();
   });
+
   it('starts at position 50', () => {
     expect(new Dial().position).toEqual(50)
   });

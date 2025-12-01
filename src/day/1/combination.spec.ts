@@ -1,16 +1,19 @@
 import {Input} from "../../input.ts";
 import {Combination} from "./combination.ts";
+import {Dial} from "./dial.ts";
 
 describe('The combination', () => {
   it('is designed in this playground', () => {
     const input = Input.create(exampleInput);
-    const combo = Combination.create();
+    const dial = Dial.create();
+    const combo = Combination.create(dial);
     expect(combo.find(input.turns())).toEqual(3)
   });
 
   it('solves the puzzle', () => {
     const input = Input.create(puzzleInput)
-    const combo = Combination.create();
+    const dial = Dial.create();
+    const combo = Combination.create(dial);
     expect(combo.find(input.turns())).toEqual(1086)
   });
 });

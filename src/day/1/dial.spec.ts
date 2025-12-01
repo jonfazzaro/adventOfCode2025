@@ -53,7 +53,7 @@ describe('The dial', () => {
         expect(dial.position).toEqual(77);
       });
 
-      describe('then L50', () => {
+      describe('then left 50', () => {
         beforeEach(() => {
           dial.turn(-50);
         });

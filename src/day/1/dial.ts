@@ -36,7 +36,7 @@ export class Dial {
     if (delta >= r) {
       return Math.floor((delta - r) / this.positions) + 1;
     }
-    return crossings;
+    return 0;
   }
 
   private wrap(n: number) {

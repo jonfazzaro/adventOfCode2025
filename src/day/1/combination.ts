@@ -1,7 +1,9 @@
 import {Dial} from "./dial.ts";
 
 export class Combination {
-  constructor(private readonly dial: Dial = Dial.create()) { }
+  constructor(dial: Dial = Dial.create()) {
+    this.dial = dial;
+  }
 
   static create(dial: Dial) {
     return new Combination(dial);

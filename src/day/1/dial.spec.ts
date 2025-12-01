@@ -7,7 +7,6 @@ describe('The dial', () => {
 
   describe('given a R3', () => {
     it('has position 53', () => {
-
       const dial = new Dial();
       dial.turn(3);
       expect(dial.position).toEqual(53);

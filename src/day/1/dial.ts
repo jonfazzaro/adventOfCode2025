@@ -29,7 +29,6 @@ export class Dial {
 
   private calculateLeftCrossings(delta: number, fromPosition: number) {
     const m = -delta;
-    // Steps needed to reach 0 when moving left
     const r = fromPosition === 0 ? this.positions : fromPosition;
     if (m >= r) {
       return Math.floor((m - r) / this.positions) + 1;

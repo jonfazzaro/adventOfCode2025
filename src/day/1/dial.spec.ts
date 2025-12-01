@@ -3,7 +3,7 @@ import {Dial} from "./dial.ts";
 describe('The dial', () => {
   let dial: Dial;
   beforeEach(() => {
-    dial = new Dial();
+    dial = Dial.create();
   });
 
   it('starts at position 50', () => {

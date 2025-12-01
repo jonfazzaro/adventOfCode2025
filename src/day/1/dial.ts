@@ -13,8 +13,30 @@ export class Dial {
     return new Dial();
   }
 
-  turn(number: number) {
-    this.position = this.wrap(this.position + number);
+  turn(delta: number) {
+    if (delta === 0) return;
+    this.crossings += this.calculateCrossings(delta, this.position);
+    this.position = this.wrap(this.position + delta);
+  }
+
+  private calculateCrossings(delta: number, fromPosition: number) {
+    let crossings = 0;
+    if (delta > 0) {
+      // Steps needed to reach 0 when moving right (clockwise)
+      const r = fromPosition === 0 ? this.positions : this.positions - fromPosition;
+      if (delta >= r) {
+        crossings += Math.floor((delta - r) / this.positions) + 1;
+      }
+    } else {
+      // Moving left (counter-clockwise)
+      const m = -delta;
+      // Steps needed to reach 0 when moving left
+      const r = fromPosition === 0 ? this.positions : fromPosition;
+      if (m >= r) {
+        crossings += Math.floor((m - r) / this.positions) + 1;
+      }
+    }
+    return crossings;
   }
 
   private wrap(n: number) {

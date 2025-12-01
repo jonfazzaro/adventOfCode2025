@@ -44,6 +44,10 @@ describe('The dial', () => {
       expect(dial.position).toEqual(0);
     });
 
+    it('has one zero crossing', () => {
+      expect(dial.crossings).toEqual(1)
+    });
+
     describe('then left 23', () => {
       beforeEach(() => {
         dial.turn(-23);
@@ -62,6 +66,13 @@ describe('The dial', () => {
           expect(dial.position).toEqual(27);
         });
       });
+    });
+  });
+
+  describe('when turning right 1000', () => {
+    it('crosses zero ten times', () => {
+      dial.turn(1000);
+      expect(dial.crossings).toEqual(10);
     });
   });
 

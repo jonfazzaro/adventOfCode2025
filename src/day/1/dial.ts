@@ -1,7 +1,7 @@
 export class Dial {
   position: number;
 
-  constructor(position: number) {
+  constructor() {
     this.position = 50;
   }
 }

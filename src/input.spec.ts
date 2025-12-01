@@ -16,7 +16,7 @@ describe('The input', () => {
 
   describe.each([
     ["R2\nL3", [-2, 3]]
-    ])('given turn instructions', (input, expected) => {
+    ])('given turn instructions ', (input, expected) => {
     it('lists the turn values', () => {
       const subject = Input.create(input);
       expect(subject.turns()).toEqual(expected)

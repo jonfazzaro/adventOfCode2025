@@ -21,8 +21,7 @@ export class Dial {
 
   private calculateCrossings(clicks: number, fromPosition: number) {
     const distanceToZero = this.distanceToZero(fromPosition, clicks);
-    if (Math.abs(clicks) < distanceToZero)
-      return 0;
+    if (Math.abs(clicks) < distanceToZero) return 0;
     return Math.floor((Math.abs(clicks) - distanceToZero) / this.positions) + 1;
   }
   private distanceToZero(position: number, clicks: number) {

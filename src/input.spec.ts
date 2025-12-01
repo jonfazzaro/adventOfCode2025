@@ -1,15 +1,13 @@
+import {Input} from "./input.ts";
+
 describe('The input', () => {
 
   it('should exist', () => {
     Input.create("")
   });
+
+  it('has lines', () => {
+
+  });
 });
 
-class Input {
-  constructor(private readonly input: string) {
-  }
-
-  static create(input: string) {
-    return new Input(input);
-  }
-}

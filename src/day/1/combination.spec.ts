@@ -1,5 +1,8 @@
-describe('The specification', () => {
-  it('should run', () => {
-    expect(true).toEqual(true);
+class Dial {
+}
+
+describe('The dial', () => {
+  it('should exist', () => {
+    new Dial()
   });
 });

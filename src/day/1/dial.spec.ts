@@ -20,8 +20,8 @@ describe('The dial', () => {
       it.todo('has position 77');
     });
 
-    describe('then L5', () => {
-      it.todo('has position 72');
+    describe('then L50', () => {
+      it.todo('has position 27');
     });
   });
 

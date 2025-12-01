@@ -10,7 +10,7 @@ describe('The dial', () => {
     expect(dial.position).toEqual(50)
   });
 
-  describe('given a R3', () => {
+  describe('when turning right 3', () => {
 
     beforeEach(() => {
       dial.turn(3);

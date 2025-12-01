@@ -26,10 +26,10 @@ export class Dial {
   }
 
   private calculateLeftCrossings(clicks: number, fromPosition: number) {
-    const effectivePosition = fromPosition === 0 ? this.positions : fromPosition;
-    if (Math.abs(clicks) < effectivePosition)
+    const distanceToZero = fromPosition === 0 ? this.positions : fromPosition;
+    if (Math.abs(clicks) < distanceToZero)
       return 0;
-    return Math.floor((Math.abs(clicks) - effectivePosition) / this.positions) + 1;
+    return Math.floor((Math.abs(clicks) - distanceToZero) / this.positions) + 1;
   }
 
   private calculateRightCrossings(clicks: number, fromPosition: number) {

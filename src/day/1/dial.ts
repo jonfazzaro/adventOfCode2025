@@ -6,10 +6,11 @@ export class Dial {
   }
 
   turn(number: number) {
-    this.position = this.wrap(this.position + number, 100);
+    this.position = this.wrap(this.position + number);
   }
 
-  private wrap(n: number, m: number) {
+  private wrap(n: number) {
+    const m = 100;
     return ((n % m) + m) % m;
   }
 }

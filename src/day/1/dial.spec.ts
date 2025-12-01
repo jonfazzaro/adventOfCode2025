@@ -17,7 +17,7 @@ describe('The dial', () => {
     it.todo('has position 0');
 
     describe('then L23', () => {
-      it.todo('has position 67');
+      it.todo('has position 77');
     });
   });
 

@@ -1,7 +1,11 @@
 export class Input {
   public lines: string[] = []
-  constructor(private readonly input: string) {
-    this.lines = input.split('\n').filter(line => !!line.length);
+  constructor(input: string) {
+    this.lines = this.parseLines(input);
+  }
+
+  private parseLines(input: string) {
+    return input.split('\n').filter(line => !!line.length);
   }
 
   static create(input: string) {

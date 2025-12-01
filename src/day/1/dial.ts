@@ -20,20 +20,23 @@ export class Dial {
   }
 
   private calculateCrossings(delta: number, fromPosition: number) {
-    if (delta <= 0) return this.calculateLeftCrossings(delta, fromPosition);
+    if (delta <= 0)
+      return this.calculateLeftCrossings(delta, fromPosition);
     return this.calculateRightCrossings(delta, fromPosition);
   }
 
   private calculateLeftCrossings(delta: number, fromPosition: number) {
     const m = -delta;
     const r = fromPosition === 0 ? this.positions : fromPosition;
-    if (m < r) return 0;
+    if (m < r)
+      return 0;
     return Math.floor((m - r) / this.positions) + 1;
   }
 
   private calculateRightCrossings(delta: number, fromPosition: number) {
     const effectivePosition = fromPosition === 0 ? this.positions : this.positions - fromPosition;
-    if (delta < effectivePosition) return 0;
+    if (delta < effectivePosition)
+      return 0;
     return Math.floor((delta - effectivePosition) / this.positions) + 1;
   }
 

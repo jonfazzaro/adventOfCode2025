@@ -32,7 +32,14 @@ describe('The dial', () => {
   });
 
   describe('given L50', () => {
-    it.todo('has position 0');
+
+    beforeEach(() => {
+      dial.turn(-50);
+    });
+
+    it('has position 0', () => {
+      expect(dial.position).toEqual(0);
+    });
 
     describe('then L23', () => {
       it.todo('has position 77');

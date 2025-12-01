@@ -19,10 +19,10 @@ export class Dial {
     this.position = this.wrap(this.position + delta);
   }
 
-  private calculateCrossings(delta: number, fromPosition: number) {
-    if (delta <= 0)
-      return this.calculateLeftCrossings(delta, fromPosition);
-    return this.calculateRightCrossings(delta, fromPosition);
+  private calculateCrossings(clicks: number, fromPosition: number) {
+    if (clicks <= 0)
+      return this.calculateLeftCrossings(clicks, fromPosition);
+    return this.calculateRightCrossings(clicks, fromPosition);
   }
 
   private calculateLeftCrossings(delta: number, fromPosition: number) {

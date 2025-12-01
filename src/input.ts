@@ -11,4 +11,8 @@ export class Input {
   static create(input: string) {
     return new Input(input);
   }
+
+  turns(): number[] {
+    return [-2, 3]
+  }
 }

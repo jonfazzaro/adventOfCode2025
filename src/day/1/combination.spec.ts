@@ -1,10 +1,11 @@
 import {Input} from "../../input.ts";
+import {Combination} from "./combination.ts";
+import {Dial} from "./dial.ts";
 
 describe('The combination', () => {
 
 
-  it('is designed in this playground', () => {
-
+  it.skip('is designed in this playground', () => {
     const input = Input.create("L68\n" +
       "L30\n" +
       "R48\n" +
@@ -17,18 +18,7 @@ describe('The combination', () => {
       "L82");
 
     const combo = Combination.create()
-    combo.find(input.lines)
-
-
+    expect(combo.find(input.lines)).toEqual(3)
   });
 });
 
-class Combination {
-  static create() {
-    return new Combination();
-  }
-
-  find(lines: string[]) {
-
-  }
-}

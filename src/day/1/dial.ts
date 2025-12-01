@@ -43,6 +43,9 @@ export class Dial {
     if (position === 0) {
       return this.positions;
     }
+    if (clicks < 0) {
+      return position;
+    }
     return this.positions - position;
   }
 

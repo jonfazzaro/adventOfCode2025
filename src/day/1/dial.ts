@@ -1,5 +1,6 @@
 export class Dial {
   position: number;
+  private positions: number;
 
   constructor() {
     this.position = 50;

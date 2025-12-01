@@ -1,16 +1,6 @@
 import {Input} from "../../input.ts";
 import {Combination} from "./combination.ts";
 
-const exampleInput = "L68\n" +
-  "L30\n" +
-  "R48\n" +
-  "L5\n" +
-  "R60\n" +
-  "L55\n" +
-  "L1\n" +
-  "L99\n" +
-  "R14\n" +
-  "L82";
 describe('The combination', () => {
   it('is designed in this playground', () => {
     const input = Input.create(exampleInput);
@@ -25,6 +15,17 @@ describe('The combination', () => {
     expect(combo.find(input.turns())).toEqual(1086)
   });
 });
+
+const exampleInput = "L68\n" +
+  "L30\n" +
+  "R48\n" +
+  "L5\n" +
+  "R60\n" +
+  "L55\n" +
+  "L1\n" +
+  "L99\n" +
+  "R14\n" +
+  "L82";
 
 const puzzleInput = "L3\n" +
   "R49\n" +

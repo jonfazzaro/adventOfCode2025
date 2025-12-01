@@ -9,7 +9,7 @@ describe('The dial', () => {
     it('has position 53', () => {
 
       const dial = new Dial();
-      dial.turnRight(3);
+      dial.turn(3);
       expect(dial.position).toEqual(53);
     });
 

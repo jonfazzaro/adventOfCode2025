@@ -5,7 +5,7 @@ export class Dial {
     this.position = 50;
   }
 
-  turnRight(number: number) {
+  turn(number: number) {
     this.position += number;
   }
 }

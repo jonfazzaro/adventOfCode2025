@@ -20,6 +20,11 @@ describe('The dial', () => {
       expect(dial.position).toEqual(53);
     });
 
+    it('has no zero crossings', () => {
+      
+      
+    });
+
     describe('then L10', () => {
       beforeEach(() => {
         dial.turn(-10);

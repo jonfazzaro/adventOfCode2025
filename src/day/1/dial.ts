@@ -31,6 +31,10 @@ export class Dial {
       return 0;
     }
     // Steps needed to reach 0 when moving right (clockwise)
+    return this.calculateRightCrossings(fromPosition, delta);
+  }
+
+  private calculateRightCrossings(fromPosition: number, delta: number) {
     const r = fromPosition === 0 ? this.positions : this.positions - fromPosition;
     if (delta >= r) {
       return Math.floor((delta - r) / this.positions) + 1;

@@ -35,9 +35,9 @@ export class Dial {
   }
 
   private calculateRightCrossings(fromPosition: number, delta: number) {
-    const r = fromPosition === 0 ? this.positions : this.positions - fromPosition;
-    if (delta < r) return 0;
-    return Math.floor((delta - r) / this.positions) + 1;
+    const effectivePosition = fromPosition === 0 ? this.positions : this.positions - fromPosition;
+    if (delta < effectivePosition) return 0;
+    return Math.floor((delta - effectivePosition) / this.positions) + 1;
   }
 
   private wrap(n: number) {

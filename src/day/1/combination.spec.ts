@@ -19,8 +19,7 @@ describe('The combination', () => {
   }
 
   it('solves the puzzle', () => {
-    const data = puzzleInput;
-    const {input, dial, combo} = arrange(data);
+    const {input, dial, combo} = arrange(puzzleInput);
     expect(combo.find(input.turns())).toEqual(1086)
     expect(dial.crossings).toEqual(6268);
   });

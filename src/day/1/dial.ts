@@ -20,9 +20,10 @@ export class Dial {
   }
 
   private calculateCrossings(clicks: number, fromPosition: number) {
-    if (clicks <= 0)
-      return this.calculateLeftCrossings(clicks, fromPosition);
-    return this.calculateLeftCrossings(clicks, fromPosition);
+    const distanceToZero = this.distanceToZero(fromPosition, clicks);
+    if (Math.abs(clicks) < distanceToZero)
+      return 0;
+    return Math.floor((Math.abs(clicks) - distanceToZero) / this.positions) + 1;
   }
 
   private calculateLeftCrossings(clicks: number, fromPosition: number) {

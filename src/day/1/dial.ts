@@ -21,17 +21,21 @@ export class Dial {
 
   private calculateCrossings(delta: number, fromPosition: number) {
     if (delta <= 0) {
-      // Moving left (counter-clockwise)
-      const m = -delta;
-      // Steps needed to reach 0 when moving left
-      const r = fromPosition === 0 ? this.positions : fromPosition;
-      if (m >= r) {
-        return Math.floor((m - r) / this.positions) + 1;
-      }
-      return 0;
+      return this.calculateLeftCrossings(delta, fromPosition);
     }
     // Steps needed to reach 0 when moving right (clockwise)
     return this.calculateRightCrossings(fromPosition, delta);
+  }
+
+  private calculateLeftCrossings(delta: number, fromPosition: number) {
+    // Moving left (counter-clockwise)
+    const m = -delta;
+    // Steps needed to reach 0 when moving left
+    const r = fromPosition === 0 ? this.positions : fromPosition;
+    if (m >= r) {
+      return Math.floor((m - r) / this.positions) + 1;
+    }
+    return 0;
   }
 
   private calculateRightCrossings(fromPosition: number, delta: number) {

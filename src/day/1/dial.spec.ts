@@ -18,8 +18,11 @@ describe('The dial', () => {
     });
 
     describe('then L10', () => {
-      it('has position 43', () => {
+      beforeEach(() => {
         dial.turn(-10);
+      });
+      
+      it('has position 43', () => {
         expect(dial.position).toEqual(43);
       });
     });

@@ -24,6 +24,7 @@ export class Dial {
     if (Math.abs(clicks) < distanceToZero) return 0;
     return Math.floor((Math.abs(clicks) - distanceToZero) / this.positions) + 1;
   }
+  
   private distanceToZero(position: number, clicks: number) {
     if (position === 0) return this.positions;
     if (clicks < 0) return position;

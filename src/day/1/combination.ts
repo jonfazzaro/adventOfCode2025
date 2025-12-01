@@ -8,13 +8,9 @@ export class Combination {
   }
 
   find(turns: number[]): number {
-    let zeroCount = 0;
-    for (const turn of turns) {
+    return turns.reduce((zeroCount, turn) => {
       this.dial.turn(turn);
-      if (this.dial.position === 0) {
-        zeroCount += 1;
-      }
-    }
-    return zeroCount;
+      return this.dial.position === 0 ? zeroCount + 1 : zeroCount;
+    }, 0);
   }
 }

@@ -22,7 +22,7 @@ export class Dial {
   private calculateCrossings(clicks: number, fromPosition: number) {
     if (clicks <= 0)
       return this.calculateLeftCrossings(clicks, fromPosition);
-    return this.calculateRightCrossings(clicks, fromPosition);
+    return this.calculateLeftCrossings(clicks, fromPosition);
   }
 
   private calculateLeftCrossings(clicks: number, fromPosition: number) {

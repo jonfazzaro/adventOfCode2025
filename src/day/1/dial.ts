@@ -14,10 +14,10 @@ export class Dial {
   private wrap(n: number) {
     const m = this.positions;
 
-    return modulo(n);
+    return modulo(n, m);
 
-    function modulo(value: number) {
-      return ((value % m) + m) % m;
+    function modulo(value: number, modulus: number) {
+      return ((value % modulus) + modulus) % modulus;
     }
   }
 }

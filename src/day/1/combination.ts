@@ -1,6 +1,7 @@
 import {Dial} from "./dial.ts";
 
 export class Combination {
+  private dial: Dial;
   constructor(dial: Dial = Dial.create()) {
     this.dial = dial;
   }

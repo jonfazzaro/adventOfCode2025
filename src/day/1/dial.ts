@@ -25,21 +25,6 @@ export class Dial {
       return 0;
     return Math.floor((Math.abs(clicks) - distanceToZero) / this.positions) + 1;
   }
-
-  private calculateLeftCrossings(clicks: number, fromPosition: number) {
-    const distanceToZero = this.distanceToZero(fromPosition, clicks);
-    if (Math.abs(clicks) < distanceToZero)
-      return 0;
-    return Math.floor((Math.abs(clicks) - distanceToZero) / this.positions) + 1;
-  }
-
-  private calculateRightCrossings(clicks: number, fromPosition: number) {
-    const distanceToZero = this.distanceToZero(fromPosition, clicks);
-    if (clicks < distanceToZero)
-      return 0;
-    return Math.floor((clicks - distanceToZero) / this.positions) + 1;
-  }
-
   private distanceToZero(position: number, clicks: number) {
     if (position === 0) return this.positions;
     if (clicks < 0) return position;

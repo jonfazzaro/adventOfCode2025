@@ -4,4 +4,8 @@ export class Dial {
   constructor() {
     this.position = 50;
   }
+
+  turnRight(number: number) {
+    this.position += number;
+  }
 }

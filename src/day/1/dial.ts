@@ -34,7 +34,7 @@ export class Dial {
     // Steps needed to reach 0 when moving right (clockwise)
     const r = fromPosition === 0 ? this.positions : this.positions - fromPosition;
     if (delta >= r) {
-      crossings += Math.floor((delta - r) / this.positions) + 1;
+      return Math.floor((delta - r) / this.positions) + 1;
     }
     return crossings;
   }

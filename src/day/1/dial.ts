@@ -26,7 +26,7 @@ export class Dial {
   }
 
   private calculateLeftCrossings(delta: number, fromPosition: number) {
-    const offsetDelta = -delta;
+    const offsetDelta = Math.abs(delta);
     const r = fromPosition === 0 ? this.positions : fromPosition;
     if (offsetDelta < r)
       return 0;

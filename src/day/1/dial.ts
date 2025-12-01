@@ -24,7 +24,7 @@ export class Dial {
       return this.calculateLeftCrossings(delta, fromPosition);
     }
     // Steps needed to reach 0 when moving right (clockwise)
-    return this.calculateRightCrossings(fromPosition, delta);
+    return this.calculateRightCrossings(delta, fromPosition);
   }
 
   private calculateLeftCrossings(delta: number, fromPosition: number) {
@@ -38,7 +38,7 @@ export class Dial {
     return 0;
   }
 
-  private calculateRightCrossings(fromPosition: number, delta: number) {
+  private calculateRightCrossings(delta: number, fromPosition: number) {
     const effectivePosition = fromPosition === 0 ? this.positions : this.positions - fromPosition;
     if (delta < effectivePosition) return 0;
     return Math.floor((delta - effectivePosition) / this.positions) + 1;

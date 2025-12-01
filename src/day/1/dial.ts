@@ -6,6 +6,10 @@ export class Dial {
   }
 
   turn(number: number) {
-    this.position += number;
+    this.position = mod(this.position + number, 100);
   }
 }
+
+const mod = (n: number, m: number) =>
+    ((n % m) + m) % m;
+

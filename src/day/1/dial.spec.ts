@@ -40,12 +40,24 @@ describe('The dial', () => {
       expect(dial.position).toEqual(0);
     });
 
-    describe('then L23', () => {
-      it.todo('has position 77');
+    describe.only('then L23', () => {
+      beforeEach(() => {
+        dial.turn(-23);
+      });
+
+      it('has position 77', () => {
+        expect(dial.position).toEqual(77);
+      });
     });
 
-    describe('then L50', () => {
-      it.todo('has position 27');
+    describe.skip('then L50', () => {
+      beforeEach(() => {
+        dial.turn(-50);
+      });
+
+      it('has position 27', () => {
+        expect(dial.position).toEqual(27);
+      });
     });
   });
 

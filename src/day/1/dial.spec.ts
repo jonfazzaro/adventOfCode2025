@@ -24,7 +24,7 @@ describe('The dial', () => {
       expect(dial.crossings).toEqual(0)
     });
 
-    describe('then L10', () => {
+    describe('then left 10', () => {
       beforeEach(() => {
         dial.turn(-10);
       });

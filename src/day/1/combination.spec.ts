@@ -10,16 +10,12 @@ describe('The combination', () => {
   });
   it('is designed in this playground', () => {
     const input = Input.create(exampleInput);
-    const dial = Dial.create();
-    const combo = Combination.create(dial);
     expect(combo.find(input.turns())).toEqual(3)
     expect(dial.crossings).toEqual(6);
   });
 
   it('solves the puzzle', () => {
     const input = Input.create(puzzleInput)
-    const dial = Dial.create();
-    const combo = Combination.create(dial);
     expect(combo.find(input.turns())).toEqual(1086)
     expect(dial.crossings).toEqual(6268);
   });

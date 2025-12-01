@@ -40,12 +40,8 @@ export class Dial {
   }
 
   private distanceToZero(position: number, clicks: number) {
-    if (position === 0) {
-      return this.positions;
-    }
-    if (clicks < 0) {
-      return position;
-    }
+    if (position === 0) return this.positions;
+    if (clicks < 0) return position;
     return this.positions - position;
   }
 

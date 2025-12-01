@@ -13,6 +13,10 @@ export class Input {
   }
 
   turns(): number[] {
-    return [-2, 3]
+    return this.lines.map(this.turn);
+  }
+
+  private turn(instruction: string) {
+    return parseInt(instruction.substring(1)) * (instruction.charAt(0) === 'R' ? 1 : -1);
   }
 }

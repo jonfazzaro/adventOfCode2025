@@ -7,8 +7,7 @@ export class Combination {
     return new Combination(dial);
   }
 
-  find(lines: string[]): number {
-    const turns = lines.map(line => line.charAt(0) === 'R' ? 1 : -1);
+  find(turns: number[]): number {
     return 0;
   }
 }

@@ -18,7 +18,7 @@ describe('The combination', () => {
       "L82");
 
     const combo = Combination.create()
-    expect(combo.find(input.lines)).toEqual(3)
+    expect(combo.find(input.turns())).toEqual(3)
   });
 });
 

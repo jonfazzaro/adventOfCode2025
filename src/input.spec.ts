@@ -15,7 +15,12 @@ describe('The input', () => {
   });
 
   describe.each([
-    ["R2\nL3", [-2, 3]]
+    ["R2\nL3", [2, -3]],
+    ["L68\n" +
+    "L30\n" +
+    "R48\n" +
+    "L5\n" +
+    "R60\n", [-68, -30, 48, -5, 60]]
     ])('given turn instructions "%s"', (input, expected) => {
     it('lists the turn values', () => {
       const subject = Input.create(input);

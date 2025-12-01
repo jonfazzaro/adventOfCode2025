@@ -4,7 +4,6 @@ import {Combination} from "./combination.ts";
 describe('The combination', () => {
   it('is designed in this playground', () => {
     const input = Input.create(exampleInput);
-
     const combo = Combination.create();
     expect(combo.find(input.turns())).toEqual(3)
   });

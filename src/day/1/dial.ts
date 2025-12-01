@@ -9,7 +9,7 @@ export class Dial {
     this.position = this.mod(this.position + number, 100);
   }
 
-  mod(n: number, m: number) {
+  private mod(n: number, m: number) {
     return ((n % m) + m) % m;
   }
 }

@@ -7,6 +7,12 @@ describe('The input', () => {
 });
 
 class Input {
+  private input: string;
+  constructor(input: string) {
+    this.input = input;
+
+  }
+
   static create(input: string) {
     return new Input(input);
   }

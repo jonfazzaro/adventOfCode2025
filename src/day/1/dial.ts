@@ -12,9 +12,7 @@ export class Dial {
   }
 
   private wrap(n: number) {
-    const m = this.positions;
-
-    return modulo(n, m);
+    return modulo(n, this.positions);
 
     function modulo(value: number, modulus: number) {
       return ((value % modulus) + modulus) % modulus;

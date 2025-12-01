@@ -38,9 +38,8 @@ export class Dial {
     const r = fromPosition === 0 ? this.positions : this.positions - fromPosition;
     if (delta < r) {
       return 0;
-    } else {
-      return Math.floor((delta - r) / this.positions) + 1;
     }
+    return Math.floor((delta - r) / this.positions) + 1;
   }
 
   private wrap(n: number) {

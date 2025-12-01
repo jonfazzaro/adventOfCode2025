@@ -10,7 +10,6 @@ class Input {
   private input: string;
   constructor(input: string) {
     this.input = input;
-
   }
 
   static create(input: string) {

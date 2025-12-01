@@ -35,7 +35,7 @@ describe('The dial', () => {
     });
   });
 
-  describe('given L50', () => {
+  describe('when turning left 50', () => {
     beforeEach(() => {
       dial.turn(-50);
     });

@@ -6,7 +6,10 @@ describe('The dial', () => {
   });
 
   describe('given a R3', () => {
-    it.todo('has position 53');
+    it('has position 53', () => {
+
+    });
+
     describe('then L10', () => {
       it.todo('has position 43');
     });

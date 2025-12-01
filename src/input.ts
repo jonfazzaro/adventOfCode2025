@@ -1,4 +1,5 @@
 export class Input {
+  public lines: string[] = []
   constructor(private readonly input: string) {
   }
 

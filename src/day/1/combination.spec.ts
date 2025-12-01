@@ -2,8 +2,6 @@ import {Input} from "../../input.ts";
 import {Combination} from "./combination.ts";
 
 describe('The combination', () => {
-
-
   it('is designed in this playground', () => {
     const input = Input.create("L68\n" +
       "L30\n" +

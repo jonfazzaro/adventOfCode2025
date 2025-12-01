@@ -29,6 +29,7 @@ export class Dial {
       if (m >= r) {
         return Math.floor((m - r) / this.positions) + 1;
       }
+      return 0;
     } else {
       // Steps needed to reach 0 when moving right (clockwise)
       const r = fromPosition === 0 ? this.positions : this.positions - fromPosition;

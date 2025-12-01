@@ -3,6 +3,7 @@ export class Dial {
 
   constructor() {
     this.position = 50;
+    this.positions = 100;
   }
 
   turn(number: number) {

@@ -1,15 +1,17 @@
 import {Dial} from "./dial.ts";
 
 describe('The dial', () => {
+  let dial: Dial;
+  beforeEach(() => {
+    dial = new Dial();
+  });
   it('starts at position 50', () => {
     expect(new Dial().position).toEqual(50)
   });
 
   describe('given a R3', () => {
-    let dial: Dial;
 
     beforeEach(() => {
-      dial = new Dial();
       dial.turn(3);
     });
 
@@ -21,7 +23,7 @@ describe('The dial', () => {
       beforeEach(() => {
         dial.turn(-10);
       });
-      
+
       it('has position 43', () => {
         expect(dial.position).toEqual(43);
       });

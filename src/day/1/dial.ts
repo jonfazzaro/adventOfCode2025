@@ -20,7 +20,6 @@ export class Dial {
   }
 
   private calculateCrossings(delta: number, fromPosition: number) {
-    let crossings = 0;
     if (delta <= 0) {
       // Moving left (counter-clockwise)
       const m = -delta;

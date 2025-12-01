@@ -16,6 +16,7 @@ describe('The combination', () => {
     const dial = Dial.create();
     const combo = Combination.create(dial);
     expect(combo.find(input.turns())).toEqual(1086)
+    expect(dial.crossings).toEqual(6268);
   });
 });
 

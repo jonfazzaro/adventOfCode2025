@@ -40,7 +40,11 @@ export class Dial {
   }
 
   private distanceToZero(position: number, clicks: number) {
-    return position === 0 ? this.positions : this.positions - position;
+    if (position === 0) {
+      return this.positions;
+    } else {
+      return this.positions - position;
+    }
   }
 
   private wrap(n: number) {

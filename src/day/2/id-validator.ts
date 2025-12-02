@@ -16,8 +16,7 @@ export class IdValidator {
     const digits = i.toString();
     for (let size = 1; size < digits.length; size++) {
       const slice = digits.slice(0, size);
-      const remainingDigits = digits.slice(size);
-      if (this.chunkString(remainingDigits, size).every((chunk) => chunk === slice))
+      if (this.chunkString(digits.slice(size), size).every((chunk) => chunk === slice))
         return true;
     }
 

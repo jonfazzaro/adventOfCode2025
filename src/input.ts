@@ -21,6 +21,6 @@ export class Input {
   }
 
   ranges() {
-    return []
+    return this.input
   }
 }

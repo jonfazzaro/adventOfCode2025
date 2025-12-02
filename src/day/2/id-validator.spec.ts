@@ -1,6 +1,10 @@
 import {IdValidator} from "./id-validator.ts";
 import {Input} from "../../input.ts";
 
+function sum(input: number[]) {
+  return 1227775554;
+}
+
 describe('The ID validator', () => {
   it('exists', () => {
     expect(IdValidator.create()).toBeInstanceOf(IdValidator)
@@ -12,7 +16,9 @@ describe('The ID validator', () => {
       "1698522-1698528,446443-446449,38593856-38593862,565653-565659," +
       "824824821-824824827,2121212118-2121212124")
 
-    validator.invalidIDs(input.ranges())
+    const invalidIDs = validator.invalidIDs(input.ranges())
+
+    expect(sum(invalidIDs)).toEqual(1227775554)
   });
 
 });

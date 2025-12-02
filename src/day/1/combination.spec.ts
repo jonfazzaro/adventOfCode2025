@@ -2,7 +2,7 @@ import {Input} from "../../input.ts";
 import {Combination} from "./combination.ts";
 import {Dial} from "./dial.ts";
 
-describe.skip('The combination', () => {
+describe('The combination', () => {
   let dial: Dial
   let combo: Combination
 

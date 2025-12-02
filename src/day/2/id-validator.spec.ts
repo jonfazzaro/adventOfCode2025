@@ -7,7 +7,7 @@ describe('The ID validator', () => {
     validator = IdValidator.create();
   });
 
-  describe.only('given a range', () => {
+  describe('given a range', () => {
     it.each([
       [1, 2, []],
       [11, 22, [11, 22]],
@@ -26,12 +26,12 @@ describe('The ID validator', () => {
 
   it('solves the example', () => {
     const input = Input.create(exampleInput)
-    expect(sum(invalidIDsIn(input.ranges()))).toEqual(1227775554)
+    expect(sum(invalidIDsIn(input.ranges()))).toEqual(4174379265)
   });
 
   it('solves the puzzle', () => {
     const input = Input.create(puzzleInput)
-    expect(sum(invalidIDsIn(input.ranges()))).toEqual(28146997880)
+    expect(sum(invalidIDsIn(input.ranges()))).toEqual(40028128307)
   });
 
   function invalidIDsIn(ranges: number[][]) {

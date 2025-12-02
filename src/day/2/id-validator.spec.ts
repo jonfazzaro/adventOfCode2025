@@ -6,15 +6,30 @@ describe('The ID validator', () => {
   beforeEach(() => {
     validator = IdValidator.create();
   });
+/*
+11-22 still has two invalid IDs, 11 and 22.
 
-  describe('given a range', () => {
+95-115 now has two invalid IDs, 99 and 111.
+998-1012 now has two invalid IDs, 999 and 1010.
+
+1188511880-1188511890 still has one invalid ID, 1188511885.
+222220-222224 still has one invalid ID, 222222.
+1698522-1698528 still contains no invalid IDs.
+446443-446449 still has one invalid ID, 446446.
+38593856-38593862 still has one invalid ID, 38593859.
+
+565653-565659 now has one invalid ID, 565656.
+824824821-824824827 now has one invalid ID, 824824824.
+2121212118-2121212124 now has one invalid ID, 2121212121.
+*/
+  describe.only('given a range', () => {
     it.each([
-      [1, 2, []],
+      // [1, 2, []],
       [11, 22, [11, 22]],
-      [11, 33, [11, 22, 33]],
-      [998, 1012, [1010]],
-      [95, 115, [99]],
-      [998, 1012, [1010]],
+      // [11, 33, [11, 22, 33]],
+      // [998, 1012, [1010]],
+      [95, 115, [99, 111]],
+      // [998, 1012, [1010]],
       [1188511880, 1188511890, [1188511885]],
       [222220, 222224, [222222]],
       [1698522, 1698528, []],

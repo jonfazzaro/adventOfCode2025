@@ -14,8 +14,10 @@ export class IdValidator {
 
   private hasRepeatingDigits(i: number) {
     const digits = i.toString();
-    if (digits.length % 2 !== 0) return false;
-    const half = digits.length / 2;
-    return digits.slice(0, half) === digits.slice(half);
+    for (let index = 0; index < digits.length; index++) {
+      const fractionLength = digits.length / index;
+      if (digits.slice(0, fractionLength) === digits.slice(fractionLength * index, fractionLength * index)) return true;
+    }
+    return false;
   }
 }

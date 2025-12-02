@@ -5,7 +5,7 @@ export class Input {
   }
 
   private parseLines(input: string) {
-    return input.split(/\n|,/).filter(line => !!line.length);
+    return input.split(/[\n,]/).filter(line => !!line.length);
   }
 
   static create(input: string) {

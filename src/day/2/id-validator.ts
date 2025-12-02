@@ -21,11 +21,6 @@ export class IdValidator {
     }
 
     return false;
-    // for (let index = 0; index < digits.length; index++) {
-    //   const fractionLength = digits.length / index;
-    //   if (digits.slice(0, fractionLength) === digits.slice(fractionLength * index, fractionLength * index)) return true;
-    // }
-    // return false;
   }
 
   private chunkString(input: string, size: number): string[] {

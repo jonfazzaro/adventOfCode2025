@@ -36,9 +36,8 @@ describe('The input', () => {
   });
 
   it('parses ranges', () => {
-
-    const subject = Input.create("");
-
+    const subject = Input.create("11-22,95-115,998-1012");
+    expect(subject.ranges()).toEqual(expect.arrayContaining([[11,22]]))
   });
 });
 

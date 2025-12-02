@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest",
+    "spec": "vitest run",
     "tcr": "npx -y nodemon -e ts -x \"npx vitest run && git add -A && git commit -m 'wip'\""
   },
   "devDependencies": {

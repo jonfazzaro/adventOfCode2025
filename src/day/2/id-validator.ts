@@ -14,11 +14,9 @@ export class IdValidator {
 
   private hasRepeatingDigits(i: number) {
     const digits = i.toString();
-    for (let j = 0; j < digits.length - 1; j++) {
-      if (digits[j] === digits[j + 1]) {
-        return true;
-      }
-    }
-    return false;
+    // Invalid if the number can be split into two equal halves (e.g., 11, 22, 33, 1010)
+    if (digits.length % 2 !== 0) return false;
+    const half = digits.length / 2;
+    return digits.slice(0, half) === digits.slice(half);
   }
 }

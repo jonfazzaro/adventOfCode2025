@@ -26,21 +26,19 @@ describe('The ID validator', () => {
 
   });
 
-  function invalidIDsIn(ranges: number[][]) {
-    return ranges.flatMap(([lower, upper]: number[]) => {
-      return validator.invalidIDs(lower, upper)
-    });
-  }
-
   it('solves the example', () => {
-    const invalidIDs = invalidIDsIn(exampleInput.ranges())
-
-    expect(sum(invalidIDs)).toEqual(1227775554)
+    expect(sum(invalidIDsIn(exampleInput.ranges()))).toEqual(1227775554)
   });
 
   it('solves the puzzle', () => {
 
   });
+
+  function invalidIDsIn(ranges: number[][]) {
+    return ranges.flatMap(([lower, upper]: number[]) => {
+      return validator.invalidIDs(lower, upper)
+    });
+  }
 
 });
 

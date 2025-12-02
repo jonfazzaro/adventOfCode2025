@@ -7,8 +7,8 @@ describe('The ID validator', () => {
     validator = IdValidator.create();
   });
 
-  describe('given a range with no repeating digits', () => {
-    it('returns no invalid IDs', () => {
+  describe('given a range', () => {
+    it('returns invalid IDs', () => {
       expect(validator.invalidIDs(11, 22)).toEqual([])
     });
 

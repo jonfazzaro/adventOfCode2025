@@ -2,8 +2,14 @@ import {IdValidator} from "./id-validator.ts";
 import {Input} from "../../input.ts";
 
 describe('The ID validator', () => {
-  it('exists', () => {
-    expect(IdValidator.create()).toBeInstanceOf(IdValidator)
+
+  describe('given a range with no repeating digits', () => {
+    it('returns no invalid IDs', () => {
+      const validator = IdValidator.create();
+      const invalidIDs = validator.invalidIDs(11, 22);
+      expect(invalidIDs).toEqual([])
+    });
+
   });
 
   it.skip('solves the example', () => {

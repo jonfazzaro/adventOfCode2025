@@ -24,7 +24,7 @@ describe('The ID validator', () => {
 */
   describe.only('given a range', () => {
     it.each([
-      // [1, 2, []],
+      [1, 2, []],
       [11, 22, [11, 22]],
       [11, 33, [11, 22, 33]],
       [95, 115, [99, 111]],

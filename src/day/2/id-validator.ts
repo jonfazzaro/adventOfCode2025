@@ -28,12 +28,9 @@ export class IdValidator {
   }
 
   private chunkString(input: string, size: number): string[] {
-    const result: string[] = [];
-
-    for (let i = 0; i < input.length; i += size) {
-      result.push(input.slice(i, i + size));
-    }
-
-    return result;
+    return Array.from(
+      {length: Math.ceil(input.length / size)},
+      (_, i) => input.slice(i * size, i * size + size)
+    );
   }
 }

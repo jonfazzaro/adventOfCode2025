@@ -2,6 +2,10 @@ import {IdValidator} from "./id-validator.ts";
 import {Input} from "../../input.ts";
 
 describe('The ID validator', () => {
+    let validator;
+  beforeEach(() => {
+    validator = IdValidator.create();
+  });
 
   describe('given a range with no repeating digits', () => {
     it('returns no invalid IDs', () => {

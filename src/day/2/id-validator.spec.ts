@@ -5,4 +5,9 @@ describe('The ID validator', () => {
     expect(IdValidator.create()).toBeInstanceOf(IdValidator)
   });
 
+  it('solves the example', () => {
+    
+    
+  });
+
 });

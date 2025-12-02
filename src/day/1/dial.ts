@@ -1,7 +1,7 @@
 export class Dial {
   position: number;
   crossings: number;
-  private positions: number;
+  private readonly positions: number;
 
   private constructor() {
     this.position = 50;

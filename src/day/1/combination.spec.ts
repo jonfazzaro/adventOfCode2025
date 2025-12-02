@@ -5,7 +5,7 @@ import {Dial} from "./dial.ts";
 describe('The combination', () => {
   let dial: Dial
   let combo: Combination
-  
+
   beforeEach(() => {
     dial = Dial.create();
     combo = Combination.create(dial);

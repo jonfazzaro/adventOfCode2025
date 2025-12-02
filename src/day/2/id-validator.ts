@@ -14,10 +14,15 @@ export class IdValidator {
 
   private hasRepeatingDigits(i: number): boolean {
     const digits = i.toString();
-    for (let index = 1; index < digits.length; index++) {
-      const slice = digits.slice(0, index);
-      const remainingDigits = digits.slice(index);
-      if (remainingDigits.split('').every((digit) => digit === slice)) return true;
+    for (let size = 1; size < digits.length; size++) {
+      const slice = digits.slice(0, size);
+      const remainingDigits = digits.slice(size);
+      if (
+        this.chunkString(remainingDigits, size).every(
+          (digit) => digit === slice
+        )
+      )
+        return true;
     }
 
     return false;
@@ -26,5 +31,15 @@ export class IdValidator {
     //   if (digits.slice(0, fractionLength) === digits.slice(fractionLength * index, fractionLength * index)) return true;
     // }
     // return false;
+  }
+
+  private chunkString(input: string, size: number): string[] {
+    const result: string[] = [];
+
+    for (let i = 0; i < input.length; i += size) {
+      result.push(input.slice(i, i + size));
+    }
+
+    return result;
   }
 }

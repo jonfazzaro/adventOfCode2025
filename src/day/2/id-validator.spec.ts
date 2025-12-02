@@ -26,10 +26,14 @@ describe('The ID validator', () => {
 
   });
 
-  it('solves the example', () => {
-    const invalidIDs = exampleInput.ranges().flatMap(([lower, upper]: number[]) => {
+  function invalidIDsIn(ranges: number[][]) {
+    return ranges.flatMap(([lower, upper]: number[]) => {
       return validator.invalidIDs(lower, upper)
-    })
+    });
+  }
+
+  it('solves the example', () => {
+    const invalidIDs = invalidIDsIn(exampleInput.ranges())
 
     expect(sum(invalidIDs)).toEqual(1227775554)
   });

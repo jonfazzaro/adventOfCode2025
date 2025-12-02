@@ -34,5 +34,11 @@ describe('The input', () => {
       expect(subject.turns()).toEqual(expected)
     });
   });
+
+  it('parses ranges', () => {
+
+    const subject = Input.create("");
+
+  });
 });
 

@@ -24,7 +24,8 @@ export class IdValidator {
   }
 
   private hasRepeatingDigitsAt(i: number, size: number): boolean {
-    return this.chunkString(i.toString(), size).every((chunk) => chunk === chunk[0]);
+    const slice = digits.slice(0, size);
+    return this.chunkString(digits.slice(size), size).every((chunk) => chunk === slice);
   }
 
   private chunkString(input: string, size: number): string[] {

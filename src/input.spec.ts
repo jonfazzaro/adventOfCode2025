@@ -9,8 +9,8 @@ describe('The input', () => {
 
   describe('given lines', () => {
     it('parses them', () => {
-      const subject = Input.create("line1\nline2");
-      expect(subject.lines.length).toEqual(2)
+      const subject = Input.create("line1\nline2\nline3");
+      expect(subject.lines.length).toEqual(3)
     });
   });
 

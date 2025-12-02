@@ -32,8 +32,8 @@ describe('The ID validator', () => {
     })
 
     expect(sum(invalidIDs)).toEqual(1227775554)
-
   });
+
   it('solves the puzzle', () => {
 
   });

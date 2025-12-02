@@ -12,7 +12,10 @@ describe('The ID validator', () => {
       "1698522-1698528,446443-446449,38593856-38593862,565653-565659," +
       "824824821-824824827,2121212118-2121212124")
 
-    const invalidIDs = validator.invalidIDs(input.ranges())
+    const invalidIDs = input.ranges().map((range: string) => {
+
+    })
+      validator.invalidIDs(input.ranges())
 
     expect(sum(invalidIDs)).toEqual(1227775554)
   });

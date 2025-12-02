@@ -12,11 +12,15 @@ export class IdValidator {
     return [...Array(to - from + 1).keys()].map((i) => i + from);
   }
 
-  private hasRepeatingDigits(i: number) {
+  private hasRepeatingDigits(i: number): boolean {
     const digits = i.toString();
-    const portions = digits.slice(0, 1);
-    const remainingDigits = digits.slice(1);
-    return remainingDigits.includes(portions);
+    for (let index = 1; index < digits.length; index++) {
+      const slice = digits.slice(0, index);
+      const remainingDigits = digits.slice(index);
+      if (remainingDigits.split('').every((digit) => digit === slice)) return true;
+    }
+
+    return false;
     // for (let index = 0; index < digits.length; index++) {
     //   const fractionLength = digits.length / index;
     //   if (digits.slice(0, fractionLength) === digits.slice(fractionLength * index, fractionLength * index)) return true;

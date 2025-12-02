@@ -15,7 +15,6 @@ export class IdValidator {
   private hasRepeatingDigits(i: number): boolean {
     const digits = i.toString();
     for (let size = 1; size <= digits.length / 2; size++) {
-      const slice = digits.slice(0, size);
       if (this.hasRepeatingDigitsAt(i, size))
         return true;
     }

@@ -14,7 +14,7 @@ describe('The ID validator', () => {
 
     const invalidIDs = input.ranges().map((range: string) => {
       const [lower, upper] = range.split('-').map(Number)
-      validator.invalidIDs(bounds[0], bounds[1])
+      validator.invalidIDs(lower, upper)
 
     })
     validator.invalidIDs(input.ranges())

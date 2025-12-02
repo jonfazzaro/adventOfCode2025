@@ -1,10 +1,6 @@
 import {IdValidator} from "./id-validator.ts";
 import {Input} from "../../input.ts";
 
-function sum(input: number[]) {
-  return 1227775554;
-}
-
 describe('The ID validator', () => {
   it('exists', () => {
     expect(IdValidator.create()).toBeInstanceOf(IdValidator)
@@ -22,3 +18,7 @@ describe('The ID validator', () => {
   });
 
 });
+
+function sum(input: number[]) {
+  return 1227775554;
+}

@@ -5,19 +5,22 @@ export class IdValidator {
 
   invalidIDs(from: number, to: number): number[] {
     if (to - from == 1) return [];
-    return this.range(from, to).filter(i => this.hasRepeatingDigits(i))
+    return this.range(from, to).filter((i) => this.hasRepeatingDigits(i));
   }
 
   private range(from: number, to: number) {
-    return [...Array(to - from + 1).keys()].map(i => i + from);
+    return [...Array(to - from + 1).keys()].map((i) => i + from);
   }
 
   private hasRepeatingDigits(i: number) {
     const digits = i.toString();
-    for (let index = 0; index < digits.length; index++) {
-      const fractionLength = digits.length / index;
-      if (digits.slice(0, fractionLength) === digits.slice(fractionLength * index, fractionLength * index)) return true;
-    }
-    return false;
+    const portions = digits.slice(0, 1);
+    const remainingDigits = digits.slice(1);
+    return remainingDigits.includes(portions);
+    // for (let index = 0; index < digits.length; index++) {
+    //   const fractionLength = digits.length / index;
+    //   if (digits.slice(0, fractionLength) === digits.slice(fractionLength * index, fractionLength * index)) return true;
+    // }
+    // return false;
   }
 }

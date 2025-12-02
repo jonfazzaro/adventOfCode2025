@@ -41,7 +41,6 @@ describe('The ID validator', () => {
 });
 
 function sum(input: number[]) {
-
   return input.reduce((total, num) => total + num, 0);
 }
 

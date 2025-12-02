@@ -19,4 +19,8 @@ export class Input {
   private turn(instruction: string) {
     return parseInt(instruction.substring(1)) * (instruction.charAt(0) === 'R' ? 1 : -1);
   }
+
+  ranges() {
+    return []
+  }
 }

@@ -3,7 +3,7 @@ export class IdValidator {
     return new IdValidator();
   }
 
-  invalidIDs(from: number, to: number) {
+  invalidIDs(from: number, to: number): number[] {
     
   }
 }

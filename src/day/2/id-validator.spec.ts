@@ -32,8 +32,8 @@ describe('The ID validator', () => {
   });
 
   it('solves the puzzle', () => {
-    const input = Input.create(exampleInput)
-    expect(sum(invalidIDsIn(input.ranges()))).toEqual(1227775554)
+    const input = Input.create(puzzleInput)
+    expect(sum(invalidIDsIn(input.ranges()))).toEqual(28146997880)
   });
 
   function invalidIDsIn(ranges: number[][]) {

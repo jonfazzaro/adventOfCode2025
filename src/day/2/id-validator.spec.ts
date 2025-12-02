@@ -23,7 +23,6 @@ describe('The ID validator', () => {
     ])('returns invalid IDs', (lower, upper, expected) => {
       expect(validator.invalidIDs(lower, upper)).toEqual(expected)
     });
-
   });
 
   it('solves the example', () => {

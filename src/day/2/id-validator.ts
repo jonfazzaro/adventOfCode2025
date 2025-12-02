@@ -23,6 +23,10 @@ export class IdValidator {
     return false;
   }
 
+  private hasRepeatingDigitsAt(i: number, size: number): boolean {
+    return this.chunkString(i.toString(), size).every((chunk) => chunk === chunk[0]);
+  }
+
   private chunkString(input: string, size: number): string[] {
     const result: string[] = [];
 

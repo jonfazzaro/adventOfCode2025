@@ -15,7 +15,6 @@ describe('The ID validator', () => {
     const invalidIDs = input.ranges().flatMap((range: string) => {
       const [lower, upper] = range.split('-').map(Number)
       return validator.invalidIDs(lower, upper)
-
     })
 
     expect(sum(invalidIDs)).toEqual(1227775554)

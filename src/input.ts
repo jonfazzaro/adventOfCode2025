@@ -21,6 +21,6 @@ export class Input {
   }
 
   ranges() {
-    return this.input
+    return this.values.map(value => value.split('-').map(Number))
   }
 }

@@ -1,9 +1,8 @@
-class IdValidator {
-}
+import {IdValidator} from "./id-validator.ts";
 
 describe('The ID validator', () => {
   it('exists', () => {
-    new IdValidator();
+    expect(new IdValidator()).toBeInstanceOf(IdValidator)
   });
 
 });

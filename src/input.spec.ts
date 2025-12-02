@@ -7,7 +7,14 @@ describe('The input', () => {
     expect(subject.lines.length).toEqual(0)
   });
 
-  describe('given two lines', () => {
+  describe('given lines', () => {
+    it('parses them', () => {
+      const subject = Input.create("line1\nline2");
+      expect(subject.lines.length).toEqual(2)
+    });
+  });
+
+  describe('given comma-separated values', () => {
     it('parses them', () => {
       const subject = Input.create("line1\nline2");
       expect(subject.lines.length).toEqual(2)

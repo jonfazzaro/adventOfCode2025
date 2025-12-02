@@ -13,6 +13,7 @@ describe('The ID validator', () => {
       "824824821-824824827,2121212118-2121212124")
 
     const invalidIDs = input.ranges().map((range: string) => {
+const bounds = range.split('-').map(Number)
 
     })
       validator.invalidIDs(input.ranges())

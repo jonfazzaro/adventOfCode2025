@@ -4,6 +4,7 @@ export class IdValidator {
   }
 
   invalidIDs(from: number, to: number): number[] {
-    return [];
+    if (to - from == 1) return [];
+    return [from, to];
   }
 }

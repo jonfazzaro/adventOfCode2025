@@ -1,7 +1,7 @@
 export class Input {
-  public lines: string[] = []
+  public values: string[] = []
   constructor(input: string) {
-    this.lines = this.parseLines(input);
+    this.values = this.parseLines(input);
   }
 
   private parseLines(input: string) {
@@ -13,7 +13,7 @@ export class Input {
   }
 
   turns(): number[] {
-    return this.lines.map(this.turn);
+    return this.values.map(this.turn);
   }
 
   private turn(instruction: string) {

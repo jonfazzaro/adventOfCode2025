@@ -4,20 +4,20 @@ describe('The input', () => {
 
   it('has lines', () => {
     const subject = Input.create("");
-    expect(subject.lines.length).toEqual(0)
+    expect(subject.values.length).toEqual(0)
   });
 
   describe('given lines', () => {
     it('parses them', () => {
       const subject = Input.create("line1\nline2\nline3");
-      expect(subject.lines.length).toEqual(3)
+      expect(subject.values.length).toEqual(3)
     });
   });
 
   describe('given comma-separated values', () => {
     it('parses them', () => {
       const subject = Input.create("line1,line2");
-      expect(subject.lines.length).toEqual(2)
+      expect(subject.values.length).toEqual(2)
     });
   });
 

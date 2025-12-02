@@ -11,6 +11,7 @@ describe('The ID validator', () => {
     it.each([
       [1, 2,[]],
       [11, 22,[11, 22]],
+      [11, 33,[11, 22, 33]],
     ])('returns invalid IDs', (lower, upper, expected) => {
       expect(validator.invalidIDs(lower, upper)).toEqual(expected)
     });

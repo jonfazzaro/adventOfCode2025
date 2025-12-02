@@ -6,7 +6,7 @@ describe('The ID validator', () => {
   beforeEach(() => {
     validator = IdValidator.create();
   });
-  
+
   describe.only('given a range', () => {
     it.each([
       [1, 2, []],

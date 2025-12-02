@@ -15,14 +15,14 @@ export class IdValidator {
   private hasRepeatingDigits(i: number): boolean {
     const digits = i.toString();
     for (let size = 1; size <= digits.length / 2; size++) {
-      if (this.hasRepeatingDigitsAt(i, size))
+      if (this.hasRepeatingDigitsAt(size, i))
         return true;
     }
 
     return false;
   }
 
-  private hasRepeatingDigitsAt(i: number, size: number): boolean {
+  private hasRepeatingDigitsAt(size: number, i: number): boolean {
     const digits = i.toString();
     const slice = digits.slice(0, size);
     return this.chunkString(digits.slice(size), size).every((chunk) => chunk === slice);

@@ -4,7 +4,10 @@ export class Joltage {
   }
 
   capacity(bank: number[]) {
-    return parseInt([this.firstDigit(bank), this.secondDigit(bank, this.firstDigit(bank))].join(''))
+    return parseInt([
+      this.firstDigit(bank),
+      this.secondDigit(bank, this.firstDigit(bank))
+    ].join(''))
   }
 
   private secondDigit(bank: number[], firstDigit: number) {

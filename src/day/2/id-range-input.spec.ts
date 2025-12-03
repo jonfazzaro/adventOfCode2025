@@ -2,7 +2,7 @@ import {Input} from "../../input.ts";
 
 class IdRangeInput extends Input {
   constructor(props) {
-    super("");
+    super("", ',');
   }
 
   static create() {

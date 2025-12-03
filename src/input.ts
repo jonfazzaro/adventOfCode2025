@@ -23,7 +23,4 @@ export class Input {
     return parseInt(instruction.substring(1)) * (instruction.charAt(0) === 'R' ? 1 : -1);
   }
 
-  ranges() {
-    return this.values.map(value => value.split('-').map(Number))
-  }
 }

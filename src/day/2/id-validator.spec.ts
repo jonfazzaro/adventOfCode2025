@@ -1,5 +1,6 @@
 import {IdValidator} from "./id-validator.ts";
 import {Input} from "../../input.ts";
+import {IdRangeInput} from "./id-range.input.ts";
 
 describe('The ID validator', () => {
   let validator: IdValidator;
@@ -25,12 +26,12 @@ describe('The ID validator', () => {
   });
 
   it('solves the example', () => {
-    const input = Input.create(exampleInput, ',')
+    const input = IdRangeInput.create(exampleInput, ',')
     expect(sum(invalidIDsIn(input.ranges()))).toEqual(4174379265)
   });
 
   it('solves the puzzle', () => {
-    const input = Input.create(puzzleInput, ',')
+    const input = IdRangeInput.create(puzzleInput, ',')
     expect(sum(invalidIDsIn(input.ranges()))).toEqual(40028128307)
   });
 

@@ -23,10 +23,6 @@ export class Joltage {
     return parseInt(digits.join(''));
   }
 
-  private nextMax(afterIndex: number) {
-    return Math.max(...this.bank.slice(afterIndex + 1));
-  }
-
   private nextMaxAndIndex(fromIndex: number, leaveAtTheEnd: number) {
     const value = Math.max(...this.bank.slice(fromIndex, this.bank.length - (leaveAtTheEnd - 1)));
     const index = this.bank.indexOf(value);

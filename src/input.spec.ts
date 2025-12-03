@@ -22,7 +22,5 @@ describe('The input', () => {
     });
   });
 
-
-
 });
 

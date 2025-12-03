@@ -15,11 +15,4 @@ export class Joltage {
     return parseInt([first, second].join(''))
   }
 
-  private sortDescending(bank: number[]) {
-    return [...bank].sort((a, b) => b - a);
-  }
-
-  private sortAscending(bank: number[]) {
-    return [...bank].sort((a, b) => a - b);
-  }
 }

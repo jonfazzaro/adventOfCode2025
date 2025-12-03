@@ -18,7 +18,7 @@ describe('The joltage meter', () => {
     });
   });
 
-  it.skip('solves the example', () => {
+  it('solves the example', () => {
     const input = BatteryInput.create("987654321111111\n" +
       "811111111111119\n" +
       "234234234234278\n" +

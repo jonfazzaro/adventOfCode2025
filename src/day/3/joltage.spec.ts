@@ -5,4 +5,11 @@ describe('The joltage meter', () => {
     expect(Joltage.create()).toBeInstanceOf(Joltage);
   });
 
+  describe('given a bank of batteries', () => {
+    it('finds its maximum ', () => {
+      
+    });
+
+  });
+
 });

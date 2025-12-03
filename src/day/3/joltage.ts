@@ -10,14 +10,15 @@ export class Joltage {
   }
 
   capacity(take = 2) {
-    const digits = this.findDigits(take, -1);
+    const digits = this.compileMaxDigits(take);
     return this.toNumber(digits)
   }
 
-  private findDigits(remaining: number, lastIndex: number): number[] {
+  private compileMaxDigits(remaining: number, afterIndex: number = -1): number[] {
     if (remaining === 0) return [];
-    const {value, index} = this.nextMaxAndIndex(lastIndex + 1, remaining);
-    return [value, ...this.findDigits(remaining - 1, index)];
+    if (this.bank.slice(afterIndex + 1).length <= remaining) return this.bank.slice(afterIndex + 1)
+    const {value, index} = this.nextMaxAndIndex(afterIndex + 1, remaining);
+    return [value, ...this.compileMaxDigits(remaining - 1, index)];
   }
 
   private toNumber(digits: number[]) {
@@ -25,8 +26,10 @@ export class Joltage {
   }
 
   private nextMaxAndIndex(fromIndex: number, leaveAtTheEnd: number) {
-    const value = Math.max(...this.bank.slice(fromIndex, this.bank.length - (leaveAtTheEnd - 1)));
-    const index = this.bank.indexOf(value);
+    const endExclusive = this.bank.length - (leaveAtTheEnd - 1);
+    const window = this.bank.slice(fromIndex, endExclusive);
+    const value = Math.max(...window);
+    const index = fromIndex + window.indexOf(value);
     return {value, index};
   }
 }

@@ -36,7 +36,9 @@ describe('The joltage meter', () => {
     describe('given a bank of batteries', () => {
       it.each([
         ["987654321111111", 987654321111],
-        ["811111111111119", 811111111119]
+        ["811111111111119", 811111111119],
+        ["234234234234278", 434234234278],
+        ["818181911112111", 888911112111],
       ])('measures its capacity', (input, expected) => {
         const bankInput = BatteryInput.create(input)
         const subject = Joltage.create(bankInput.banks()[0]);

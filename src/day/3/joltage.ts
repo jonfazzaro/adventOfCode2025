@@ -7,11 +7,12 @@ export class Joltage {
     const firstDigit = this.firstDigit(bank);
     return parseInt([
       firstDigit,
-      this.secondDigit(bank, firstDigit)
+      this.secondDigit(bank)
     ].join(''))
   }
 
-  private secondDigit(bank: number[], firstDigit: number) {
+  private secondDigit(bank: number[]) {
+    const firstDigit = this.firstDigit(bank);
     const firstDigitIndex = bank.indexOf(firstDigit);
     return Math.max(...bank.slice(firstDigitIndex + 1));
   }

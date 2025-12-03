@@ -4,11 +4,9 @@ export class Joltage {
   }
 
   capacity(bank: number[]) {
-    const maxDigit = Math.max(...bank);
-    // If max digit is at the end, we need the second largest from the beginning
-    const firstDigit = bank.indexOf(maxDigit) === bank.length - 1
+    const firstDigit = this.isLastOf(bank, Math.max(...bank))
       ? Math.max(...bank.slice(0, bank.length - 1))
-      : maxDigit;
+      : Math.max(...bank);
 
     const firstDigitIndex = bank.indexOf(firstDigit);
     const secondDigit = Math.max(...bank.slice(firstDigitIndex + 1));
@@ -16,4 +14,7 @@ export class Joltage {
     return parseInt([firstDigit, secondDigit].join(''))
   }
 
+  private isLastOf(bank: number[], maxDigit: number) {
+    return bank.indexOf(maxDigit) === bank.length - 1;
+  }
 }

@@ -1,5 +1,4 @@
-class Joltage {
-}
+import {Joltage} from "./joltage.ts";
 
 describe('The joltage meter', () => {
   it('should exist', () => {

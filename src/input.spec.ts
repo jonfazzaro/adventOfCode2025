@@ -1,5 +1,4 @@
 import {Input} from "./input.ts";
-import {DialTurnInput} from "./day/1/dial-turn-input.ts";
 
 describe('The input', () => {
 

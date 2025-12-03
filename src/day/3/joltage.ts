@@ -14,7 +14,7 @@ export class Joltage {
       this.secondDigit()
     ];
 
-    for(let i = 0; i < take; i++)
+
 
 
     return this.toNumber(digits)
@@ -29,7 +29,7 @@ export class Joltage {
     return Math.max(...this.bank.slice(firstDigitIndex + 1));
   }
 
-  private firstDigit() {
+  private firstDigit(take :number) {
     return this.isLastOf(Math.max(...this.bank))
       ? Math.max(...this.bank.slice(0, this.bank.length - 1))
       : Math.max(...this.bank);

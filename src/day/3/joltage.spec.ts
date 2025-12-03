@@ -8,7 +8,7 @@ describe('The joltage meter', () => {
 
   describe('given a bank of batteries', () => {
     it.each([
-      ["0145671", 67],
+      ["0145671", 71],
       ["987654321111111", 98],
       ["811111111111119", 89]
     ])('measures its capacity', (input, expected) => {

@@ -4,12 +4,15 @@ export class Joltage {
   }
 
   capacity(bank: number[]) {
-    const [one, two] = this.sortDescending(bank).slice(0, 2);
-    const first = bank.indexOf(one);
-    const second = bank.indexOf(two);
-
-    console.log({one, two, first, second})
-    return parseInt(this.sortAscending([first, second]).map(i => bank[i]).join(''))
+    // find the max digit
+    let first = Math.max(...bank);
+    // if its the last one, find the second highest
+    if (bank.indexOf(first) === bank.length - 1)
+      first = Math.max(...bank.slice(0, bank.length - 1));
+    // starting from its index, find the next highest
+    const second = Math.max(...bank.slice(bank.indexOf(first) + 1));
+    // join and sum
+    return parseInt([first, second].join(''))
   }
 
   private sortDescending(bank: number[]) {

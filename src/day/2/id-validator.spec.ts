@@ -25,7 +25,7 @@ describe('The ID validator', () => {
   });
 
   it('solves the example', () => {
-    const input = Input.create(exampleInput)
+    const input = Input.create(exampleInput, ',')
     expect(sum(invalidIDsIn(input.ranges()))).toEqual(4174379265)
   });
 

@@ -1,7 +1,7 @@
 import {Joltage} from "./joltage.ts";
 
 describe('The joltage meter', () => {
-  it('should exist', () => {
+  it('exists', () => {
     expect(Joltage.create()).toBeInstanceOf(Joltage);
   });
 

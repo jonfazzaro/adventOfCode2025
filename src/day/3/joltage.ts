@@ -4,7 +4,6 @@ export class Joltage {
   }
 
   capacity(bank: number[]) {
-    console.log(bank)
     return parseInt(this.sortDescending(bank)
       .slice(0, 2)
       .join(''))

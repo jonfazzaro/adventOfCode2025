@@ -16,7 +16,7 @@ describe('The joltage meter', () => {
     });
   });
 
-  it.skip('solves the example', () => {
+  it.only('solves the example', () => {
     const input = BatteryInput.create("987654321111111\n" +
       "811111111111119\n" +
       "234234234234278\n" +
@@ -24,8 +24,8 @@ describe('The joltage meter', () => {
 
     const subject = Joltage.create();
     expect(sum(input.banks().map(bank => subject.capacity(bank)))).toEqual(357)
-
   });
+
   function sum(input: number[]) {
     console.log(input)
     return input.reduce((total, num) => total + num, 0);

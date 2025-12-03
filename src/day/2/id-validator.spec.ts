@@ -35,9 +35,7 @@ describe('The ID validator', () => {
   });
 
   function invalidIDsIn(ranges: number[][]) {
-    return ranges.flatMap(([lower, upper]: number[]) => {
-      return validator.invalidIDs(lower, upper)
-    });
+    return ranges.flatMap(([lower, upper]: number[]) => validator.invalidIDs(lower, upper));
   }
 
   function sum(input: number[]) {

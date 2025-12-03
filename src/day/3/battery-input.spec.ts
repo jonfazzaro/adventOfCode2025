@@ -1,18 +1,14 @@
 import {Input} from "../../input.ts";
-
-class BatteryInput extends Input {
-  constructor(input: string) {
-    super(input, '\n');
-  }
-
-  static create(input: string) {
-    return new BatteryInput(input);
-  }
-}
+import {BatteryInput} from "./battery-input.ts";
 
 describe('The batter input', () => {
   it('should exist', () => {
     expect(BatteryInput.create("")).toBeInstanceOf(Input);
+  });
+
+  it('splits a line of digits into an array', () => {
+    const subject = BatteryInput.create("811111111111119");
+    expect(subject.banks()).toEqual([8,1,1,1,1,1,1,1,1,1,1,1,1,1,9]);
   });
 
 });

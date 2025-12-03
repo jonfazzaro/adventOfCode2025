@@ -9,10 +9,11 @@ export class Joltage {
   }
 
   capacity(take = 2) {
-    return parseInt([
+    const digits = [
       this.firstDigit(),
       this.secondDigit()
-    ].join(''))
+    ];
+    return parseInt(digits.join(''))
   }
 
   private secondDigit() {

@@ -9,10 +9,12 @@ export class Joltage {
   }
 
   capacity(take = 2) {
-    const digits = [
+    let digits = [
       this.firstDigit(),
       this.secondDigit()
     ];
+
+    for(let i = 0; i < take; i++)
 
 
     return this.toNumber(digits)

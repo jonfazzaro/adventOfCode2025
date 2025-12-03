@@ -2,7 +2,7 @@ import {Input} from "./input.ts";
 
 describe('The input', () => {
 
-  it('has lines', () => {
+  it('has values', () => {
     const subject = Input.create("");
     expect(subject.values.length).toEqual(0)
   });

@@ -25,7 +25,7 @@ export class Joltage {
     return parseInt(digits.join(''));
   }
 
-  private nextMax(take: number) {
+  private nextMax(fromIndex: number) {
     return Math.max(...this.bank.slice(this.bank.indexOf(this.firstDigit(take)) + 1));
   }
 

@@ -10,12 +10,10 @@ export class Joltage {
   }
 
   capacity(take = 2) {
-
     const digits = this.findDigits(take, -1);
-
     return this.toNumber(digits)
-
   }
+
   private findDigits(remaining: number, lastIndex: number): number[] {
     if (remaining === 0) return [];
     const {value, index} = this.nextMaxAndIndex(lastIndex + 1, remaining);

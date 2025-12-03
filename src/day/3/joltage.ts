@@ -35,6 +35,6 @@ export class Joltage {
   private firstMax(take: number) {
     const value = Math.max(...this.bank.slice(0, take));
     const index = this.bank.indexOf(value);
-    return value;
+    return {value, index};
   }
 }

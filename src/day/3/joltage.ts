@@ -16,10 +16,9 @@ export class Joltage {
   }
 
   private firstDigit(bank: number[]) {
-    const firstDigit = this.isLastOf(bank, Math.max(...bank))
+    return this.isLastOf(bank, Math.max(...bank))
       ? Math.max(...bank.slice(0, bank.length - 1))
       : Math.max(...bank);
-    return firstDigit;
   }
 
   private isLastOf(bank: number[], maxDigit: number) {

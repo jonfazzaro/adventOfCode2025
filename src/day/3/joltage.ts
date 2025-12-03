@@ -1,5 +1,6 @@
 export class Joltage {
   private bank: number[];
+
   private constructor(bank: number[]) {
     this.bank = bank;
   }
@@ -10,11 +11,9 @@ export class Joltage {
 
   capacity(take = 2) {
     let digits = [
-      this.firstDigit(),
+      this.firstDigit(take),
       this.secondDigit()
     ];
-
-
 
 
     return this.toNumber(digits)
@@ -29,9 +28,9 @@ export class Joltage {
     return Math.max(...this.bank.slice(firstDigitIndex + 1));
   }
 
-  private firstDigit(take :number) {
+  private firstDigit(take: number) {
     return this.isLastOf(Math.max(...this.bank))
-      ? Math.max(...this.bank.slice(0, this.bank.length - 1))
+      ? Math.max(...this.bank.slice(0, this.bank.length - (take - 1)))
       : Math.max(...this.bank);
   }
 

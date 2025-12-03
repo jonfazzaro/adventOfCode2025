@@ -1,6 +1,9 @@
 export class Input {
   public values: string[] = []
-  constructor(input: string) {
+  private separator: string;
+
+  constructor(input: string, separator: string) {
+    this.separator = separator;
     this.values = this.parseLines(input);
   }
 
@@ -8,8 +11,8 @@ export class Input {
     return input.split(/[\n,]/).filter(line => !!line.length);
   }
 
-  static create(input: string) {
-    return new Input(input);
+  static create(input: string, separator = '\n'): Input {
+    return new Input(input, separator);
   }
 
   turns(): number[] {

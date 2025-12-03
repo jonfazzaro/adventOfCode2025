@@ -30,10 +30,14 @@ describe('The input', () => {
     "R60\n", [-68, -30, 48, -5, 60]]
     ])('given turn instructions "%s"', (input, expected) => {
     it('lists the turn values', () => {
-      const subject = Input.create(input);
+      const subject = DialTurnInput.create(input);
       expect(subject.turns()).toEqual(expected)
     });
   });
 
 });
+
+class DialTurnInput extends Input {
+  
+}
 

@@ -9,4 +9,7 @@ export class IdRangeInput extends Input {
     return new IdRangeInput(input)
   }
 
+  ranges() {
+    return this.values.map(value => value.split('-').map(Number))
+  }
 }

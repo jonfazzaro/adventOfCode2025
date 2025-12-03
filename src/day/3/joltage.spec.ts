@@ -27,7 +27,6 @@ describe('The joltage meter', () => {
   });
 
   function sum(input: number[]) {
-    console.log(input)
     return input.reduce((total, num) => total + num, 0);
   }
 });

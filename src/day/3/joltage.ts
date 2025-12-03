@@ -1,6 +1,11 @@
 export class Joltage {
+  private constructor(bank: number[]) {
+    this.bank = bank;
+
+  }
+
   static create(bank: number[]) {
-    return new Joltage();
+    return new Joltage(bank);
   }
 
   capacity(bank: number[]) {

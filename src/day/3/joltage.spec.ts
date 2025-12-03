@@ -45,6 +45,11 @@ describe('The joltage meter', () => {
         expect(subject.capacity(12)).toEqual(expected)
       });
     });
+
+    it('solves the puzzle', () => {
+      const input = BatteryInput.create(puzzleInput)
+      expect(sum(input.banks().map(bank => Joltage.create(bank).capacity(12)))).toEqual(168027167146027)
+    });
   });
 
   function sum(input: number[]) {

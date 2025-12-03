@@ -10,8 +10,6 @@ export class Joltage {
   }
 
   capacity(take = 2) {
-    const firstDigit = this.firstDigit(take);
-    const firstDigitIndex = this.bank.indexOf(this.firstDigit(take));
     const {value, index} = this.nextMaxAndIndex(0, take);
     let digits = [
       value,

@@ -9,7 +9,7 @@ export class BatteryInput extends Input {
     return new BatteryInput(input);
   }
 
-  banks() {
-    return this.values[0].split('').map(Number);
+  banks(): number[][] {
+    return this.values.map(value => value.split('').map(Number))
   }
 }

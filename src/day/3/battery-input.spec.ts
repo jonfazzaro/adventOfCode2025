@@ -8,13 +8,17 @@ describe('The batter input', () => {
 
   it('splits a line of digits into an array', () => {
     const subject = BatteryInput.create("811111111111119");
-    expect(subject.banks()).toEqual([8,1,1,1,1,1,1,1,1,1,1,1,1,1,9]);
+    expect(subject.banks()).toEqual([[8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 9]]);
   });
 
   describe('given multi-line input', () => {
     it('returns multiple arrays', () => {
-      const subject = BatteryInput.create("811111111111119\n" +"")
-      
+      const subject = BatteryInput.create(
+        "811111111111119\n" +
+        "234234234234278")
+      expect(subject.banks()).toEqual([
+        [8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 9],
+        [2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 7, 8]]);
     });
 
   });

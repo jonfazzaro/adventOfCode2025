@@ -15,12 +15,5 @@ export class Input {
     return new Input(input, separator);
   }
 
-  turns(): number[] {
-    return this.values.map(this.turn);
-  }
-
-  private turn(instruction: string) {
-    return parseInt(instruction.substring(1)) * (instruction.charAt(0) === 'R' ? 1 : -1);
-  }
 
 }

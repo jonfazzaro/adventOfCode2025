@@ -1,6 +1,6 @@
-import {Input} from "../../input.ts";
 import {Combination} from "./combination.ts";
 import {Dial} from "./dial.ts";
+import {DialTurnInput} from "./dial-turn-input.ts";
 
 describe('The combination', () => {
   let dial: Dial
@@ -12,13 +12,13 @@ describe('The combination', () => {
   });
 
   it('solves the example', () => {
-    const input = Input.create(exampleInput);
+    const input = DialTurnInput.create(exampleInput);
     expect(combo.find(input.turns())).toEqual(3)
     expect(dial.crossings).toEqual(6);
   });
 
   it('solves the puzzle', () => {
-    const input = Input.create(puzzleInput)
+    const input = DialTurnInput.create(puzzleInput)
     expect(combo.find(input.turns())).toEqual(1086)
     expect(dial.crossings).toEqual(6268);
   });

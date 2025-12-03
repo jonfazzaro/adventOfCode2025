@@ -17,7 +17,7 @@ export class Joltage {
     ];
 
     let digits2 = []
-    let lastIndex = 0
+    let lastIndex = -1
     for (let i = 0; i < take; i++) {
       const {value, index} = this.nextMaxAndIndex(lastIndex + 1, take - i - 1);
       lastIndex = index;

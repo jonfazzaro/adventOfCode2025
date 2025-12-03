@@ -13,7 +13,13 @@ export class Joltage {
       this.firstDigit(),
       this.secondDigit()
     ];
-    return parseInt(digits.join(''))
+
+
+    return this.toNumber(digits)
+  }
+
+  private toNumber(digits: number[]) {
+    return parseInt(digits.join(''));
   }
 
   private secondDigit() {

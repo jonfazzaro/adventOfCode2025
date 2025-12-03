@@ -7,7 +7,9 @@ describe('The joltage meter', () => {
 
   describe('given a bank of batteries', () => {
     it('measures its capacity', () => {
-      
+      const bank = [0,1,4,5,6,7,1];
+      const subject = Joltage.create();
+      expect(subject.capacity(bank)).toEqual(76)
     });
 
   });

@@ -19,7 +19,7 @@ describe('The ID validator', () => {
       [1698522, 1698528, []],
       [446443, 446449, [446446]],
       [38593856, 38593862, [38593859]],
-    ])('returns invalid IDs', (lower, upper, expected) => {
+    ])('finds invalid IDs', (lower, upper, expected) => {
       expect(validator.invalidIDs(lower, upper)).toEqual(expected)
     });
   });

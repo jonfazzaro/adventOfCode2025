@@ -11,15 +11,15 @@ export class Joltage {
 
   capacity(take = 2) {
 
-    let digits = []
-    let lastIndex = -1
-    for (let i = 0; i < take; i++) {
-      const {value, index} = this.nextMaxAndIndex(lastIndex + 1, take - i);
-      lastIndex = index;
-      digits.push(value);
-    }
+    const digits = this.findDigits(take, -1);
 
     return this.toNumber(digits)
+
+  }
+  private findDigits(remaining: number, lastIndex: number): number[] {
+    if (remaining === 0) return [];
+    const {value, index} = this.nextMaxAndIndex(lastIndex + 1, remaining);
+    return [value, ...this.findDigits(remaining - 1, index)];
   }
 
   private toNumber(digits: number[]) {

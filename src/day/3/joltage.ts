@@ -4,6 +4,7 @@ export class Joltage {
   }
 
   capacity(bank: number[]) {
+    const take = 2;
     return parseInt([
       this.firstDigit(bank),
       this.secondDigit(bank)
@@ -13,6 +14,10 @@ export class Joltage {
   private secondDigit(bank: number[]) {
     const firstDigitIndex = bank.indexOf(this.firstDigit(bank));
     return Math.max(...bank.slice(firstDigitIndex + 1));
+  }
+
+  private nextDigit(bank: number[], fromIndex: number) {
+    return bank[bank.indexOf(digit) + 1];
   }
 
   private firstDigit(bank: number[]) {

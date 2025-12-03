@@ -1,15 +1,5 @@
 import {Input} from "../../input.ts";
-
-class IdRangeInput extends Input {
-  constructor() {
-    super("", ',');
-  }
-
-  static create() {
-    return new IdRangeInput()
-  }
-
-}
+import {IdRangeInput} from "./id-range.input.ts";
 
 describe('The ID range input', () => {
   it('should exist', () => {

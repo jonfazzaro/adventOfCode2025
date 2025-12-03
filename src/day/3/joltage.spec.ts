@@ -14,7 +14,7 @@ describe('The joltage meter', () => {
     ])('measures its capacity', (input, expected) => {
       const bankInput= BatteryInput.create(input)
       const subject = Joltage.create(bankInput.banks()[0]);
-      expect(subject.capacity(bankInput.banks()[0])).toEqual(expected)
+      expect(subject.capacity()).toEqual(expected)
     });
   });
 
@@ -24,14 +24,12 @@ describe('The joltage meter', () => {
       "234234234234278\n" +
       "818181911112111")
 
-    const subject = Joltage.create(input.banks()[0]);
-    expect(sum(input.banks().map(bank => subject.capacity(bank)))).toEqual(357)
+    expect(sum(input.banks().map(bank => Joltage.create(bank).capacity()))).toEqual(357)
   });
 
   it('solves the puzzle', () => {
     const input = BatteryInput.create(puzzleInput)
-    const subject = Joltage.create(input.banks()[0]);
-    expect(sum(input.banks().map(bank => subject.capacity(bank)))).toEqual(16973)
+    expect(sum(input.banks().map(bank => Joltage.create(bank).capacity()))).toEqual(16973)
   });
 
   function sum(input: number[]) {

@@ -8,26 +8,26 @@ export class Joltage {
     return new Joltage(bank);
   }
 
-  capacity(bank: number[]) {
+  capacity() {
     const take = 2;
     return parseInt([
-      this.firstDigit(bank),
-      this.secondDigit(bank)
+      this.firstDigit(),
+      this.secondDigit()
     ].join(''))
   }
 
-  private secondDigit(bank: number[]) {
-    const firstDigitIndex = bank.indexOf(this.firstDigit(bank));
-    return Math.max(...bank.slice(firstDigitIndex + 1));
+  private secondDigit() {
+    const firstDigitIndex = this.bank.indexOf(this.firstDigit());
+    return Math.max(...this.bank.slice(firstDigitIndex + 1));
   }
 
-  private firstDigit(bank: number[]) {
-    return this.isLastOf(bank, Math.max(...bank))
-      ? Math.max(...bank.slice(0, bank.length - 1))
-      : Math.max(...bank);
+  private firstDigit() {
+    return this.isLastOf(Math.max(...this.bank))
+      ? Math.max(...this.bank.slice(0, this.bank.length - 1))
+      : Math.max(...this.bank);
   }
 
-  private isLastOf(bank: number[], maxDigit: number) {
-    return bank.indexOf(maxDigit) === bank.length - 1;
+  private isLastOf(maxDigit: number) {
+    return this.bank.indexOf(maxDigit) === this.bank.length - 1;
   }
 }

@@ -16,6 +16,8 @@ export class Joltage {
       this.nextMaxAndIndex(index+1, take-1).value
     ];
 
+    for (let i = 0; i < take; i++) {}
+
     return this.toNumber(digits)
   }
 

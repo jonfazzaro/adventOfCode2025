@@ -12,8 +12,7 @@ export class Joltage {
 
   private secondDigit(bank: number[], firstDigit: number) {
     const firstDigitIndex = bank.indexOf(firstDigit);
-    const secondDigit = Math.max(...bank.slice(firstDigitIndex + 1));
-    return secondDigit;
+    return Math.max(...bank.slice(firstDigitIndex + 1));
   }
 
   private firstDigit(bank: number[]) {

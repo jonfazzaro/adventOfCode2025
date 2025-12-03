@@ -3,7 +3,7 @@ import {BatteryInput} from "./battery-input.ts";
 
 describe('The joltage meter', () => {
   it('exists', () => {
-    expect(Joltage.create()).toBeInstanceOf(Joltage);
+    expect(Joltage.create([])).toBeInstanceOf(Joltage);
   });
 
   describe('given a bank of batteries', () => {
@@ -24,13 +24,13 @@ describe('The joltage meter', () => {
       "234234234234278\n" +
       "818181911112111")
 
-    const subject = Joltage.create();
+    const subject = Joltage.create(input.banks()[0]);
     expect(sum(input.banks().map(bank => subject.capacity(bank)))).toEqual(357)
   });
 
   it('solves the puzzle', () => {
     const input = BatteryInput.create(puzzleInput)
-    const subject = Joltage.create();
+    const subject = Joltage.create(input.banks()[0]);
     expect(sum(input.banks().map(bank => subject.capacity(bank)))).toEqual(16973)
   });
 

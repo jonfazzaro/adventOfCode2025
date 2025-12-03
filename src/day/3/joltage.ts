@@ -1,5 +1,5 @@
 export class Joltage {
-  static create() {
+  static create(bank: number[]) {
     return new Joltage();
   }
 

@@ -12,7 +12,8 @@ describe('The batter input', () => {
   });
 
   describe('given multi-line input', () => {
-    it('re', () => {
+    it('returns multiple arrays', () => {
+      const subject = BatteryInput.create("811111111111119\n" +"")
       
     });
 

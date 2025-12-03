@@ -1,9 +1,12 @@
 class BatteryInput {
+  static create() {
+    return new BatteryInput();
+  }
 }
 
 describe('The batter input', () => {
   it('should exist', () => {
-    expect(new BatteryInput()).toBeInstanceOf(BatteryInput);
+    expect(BatteryInput.create()).toBeInstanceOf(BatteryInput);
   });
 
 });

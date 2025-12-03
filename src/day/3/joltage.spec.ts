@@ -13,7 +13,7 @@ describe('The joltage meter', () => {
       ["811111111111119", 89]
     ])('measures its capacity', (input, expected) => {
       const bankInput= BatteryInput.create(input)
-      const subject = Joltage.create();
+      const subject = Joltage.create(bankInput.banks()[0]);
       expect(subject.capacity(bankInput.banks()[0])).toEqual(expected)
     });
   });

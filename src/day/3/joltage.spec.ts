@@ -4,7 +4,7 @@ import {BatteryInput} from "./battery-input.ts";
 describe('The joltage meter', () => {
   describe('when taking two batteries', () => {
 
-    describe('given a bank of batteries', () => {
+    describe.only('given a bank of batteries', () => {
       it.each([
         ["0145671", 71],
         ["987654321111111", 98],

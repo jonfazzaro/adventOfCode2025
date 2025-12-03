@@ -32,7 +32,7 @@ export class Joltage {
     return Math.max(...this.bank.slice(0, this.bank.length - (take - 1)))
   }
 
-  private nextMaxAndIndex(afterIndex: number, take: number) {
+  private nextMaxAndIndex(fromIndex: number, take: number) {
     const value = Math.max(...this.bank.slice(0, this.bank.length - (take - 1)));
     const index = this.bank.indexOf(value);
     return {value, index};

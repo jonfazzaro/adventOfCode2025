@@ -8,7 +8,7 @@ export class Joltage {
     return new Joltage(bank);
   }
 
-  capacity(_take = 2) {
+  capacity(take = 2) {
     return parseInt([
       this.firstDigit(),
       this.secondDigit()

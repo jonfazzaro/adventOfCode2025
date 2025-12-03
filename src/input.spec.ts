@@ -16,7 +16,7 @@ describe('The input', () => {
 
   describe('given comma-separated values', () => {
     it('parses them', () => {
-      const subject = Input.create("line1,line2");
+      const subject = Input.create("line1,line2", ',');
       expect(subject.values.length).toEqual(2)
     });
   });
@@ -36,7 +36,7 @@ describe('The input', () => {
   });
 
   it('parses ranges', () => {
-    const subject = Input.create("11-22,95-115,998-1012");
+    const subject = Input.create("11-22,95-115,998-1012", ',');
     expect(subject.ranges()).toEqual(expect.arrayContaining([
       [11,22],
       [95,115],

@@ -26,11 +26,7 @@ export class Joltage {
   private nextMax(afterIndex: number) {
     return Math.max(...this.bank.slice(afterIndex + 1));
   }
-
-  private firstDigit(take: number) {
-    return Math.max(...this.bank.slice(0, this.bank.length - (take - 1)))
-  }
-
+  
   private nextMaxAndIndex(fromIndex: number, leaveAtTheEnd: number) {
     const value = Math.max(...this.bank.slice(fromIndex, this.bank.length - (leaveAtTheEnd - 1)));
     const index = this.bank.indexOf(value);

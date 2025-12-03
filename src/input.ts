@@ -4,10 +4,10 @@ export class Input {
 
   constructor(input: string, separator: string) {
     this.separator = separator;
-    this.values = this.parseLines(input);
+    this.values = this.parseValues(input);
   }
 
-  private parseLines(input: string) {
+  private parseValues(input: string) {
     return input.split(this.separator).filter(line => !!line.length);
   }
 

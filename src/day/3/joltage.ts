@@ -23,6 +23,7 @@ export class Joltage {
       lastIndex = index;
       digits2.push(value);
     }
+    console.log(digits2)
 
     return this.toNumber(digits)
   }

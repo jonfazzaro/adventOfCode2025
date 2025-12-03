@@ -1,7 +1,7 @@
 export class Joltage {
+  private bank: number[];
   private constructor(bank: number[]) {
     this.bank = bank;
-
   }
 
   static create(bank: number[]) {

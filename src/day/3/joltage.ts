@@ -4,6 +4,6 @@ export class Joltage {
   }
 
   capacity(bank: number[]) {
-    return 76;
+    return parseInt(bank.sort((a, b) => b - a).slice(0, 2).join(''))
   }
 }

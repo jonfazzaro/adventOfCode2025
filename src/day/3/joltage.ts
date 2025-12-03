@@ -5,10 +5,8 @@ export class Joltage {
 
   capacity(bank: number[]) {
     const maxDigit = Math.max(...bank);
-    const maxDigitIndex = bank.indexOf(maxDigit);
-
     // If max digit is at the end, we need the second largest from the beginning
-    const firstDigit = maxDigitIndex === bank.length - 1
+    const firstDigit = bank.indexOf(maxDigit) === bank.length - 1
       ? Math.max(...bank.slice(0, bank.length - 1))
       : maxDigit;
 

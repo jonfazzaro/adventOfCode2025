@@ -17,7 +17,6 @@ export class Joltage {
       this.nextMax(firstDigitIndex)
     ];
 
-
     return this.toNumber(digits)
   }
 
@@ -28,12 +27,7 @@ export class Joltage {
   private nextMax(afterIndex: number) {
     return Math.max(...this.bank.slice(afterIndex + 1));
   }
-
-  private secondDigit(take: number) {
-    const firstDigitIndex = this.bank.indexOf(this.firstDigit(take));
-    return Math.max(...this.bank.slice(firstDigitIndex + 1));
-  }
-
+  
   private firstDigit(take: number) {
     return Math.max(...this.bank.slice(0, this.bank.length - (take - 1)))
   }

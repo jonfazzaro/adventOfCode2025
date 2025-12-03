@@ -1,4 +1,5 @@
 import {Joltage} from "./joltage.ts";
+import {BatteryInput} from "./battery-input.ts";
 
 describe('The joltage meter', () => {
   it('exists', () => {
@@ -13,6 +14,13 @@ describe('The joltage meter', () => {
       const subject = Joltage.create();
       expect(subject.capacity(bank)).toEqual(expected)
     });
+  });
+
+  it('solves the example', () => {
+    const input = BatteryInput.create("987654321111111\n" +
+      "811111111111119\n" +
+      "234234234234278\n" +
+      "818181911112111")
 
   });
 

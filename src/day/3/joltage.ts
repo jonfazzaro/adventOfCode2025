@@ -16,10 +16,6 @@ export class Joltage {
     return Math.max(...bank.slice(firstDigitIndex + 1));
   }
 
-  private nextDigit(bank: number[], afterIndex: number) {
-    return Math.max(...bank.slice(afterIndex + 1));
-  }
-
   private firstDigit(bank: number[]) {
     return this.isLastOf(bank, Math.max(...bank))
       ? Math.max(...bank.slice(0, bank.length - 1))

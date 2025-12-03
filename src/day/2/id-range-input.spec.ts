@@ -6,7 +6,7 @@ class IdRangeInput extends Input {
   }
 
   static create() {
-    return new IdRangeInput({});
+    return new IdRangeInput("");
   }
 
 }

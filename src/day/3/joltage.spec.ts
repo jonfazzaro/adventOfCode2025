@@ -6,7 +6,7 @@ describe('The joltage meter', () => {
   });
 
   describe('given a bank of batteries', () => {
-    it('finds its maximum ', () => {
+    it('measures its capacity', () => {
       
     });
 

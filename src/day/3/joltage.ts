@@ -13,7 +13,7 @@ export class Joltage {
     const {value, index} = this.nextMaxAndIndex(0, take);
     let digits = [
       value,
-      this.nextMax(index)
+      this.nextMaxAndIndex(index+1, take-1).value
     ];
 
     return this.toNumber(digits)
@@ -26,7 +26,7 @@ export class Joltage {
   private nextMax(afterIndex: number) {
     return Math.max(...this.bank.slice(afterIndex + 1));
   }
-  
+
   private nextMaxAndIndex(fromIndex: number, leaveAtTheEnd: number) {
     const value = Math.max(...this.bank.slice(fromIndex, this.bank.length - (leaveAtTheEnd - 1)));
     const index = this.bank.indexOf(value);

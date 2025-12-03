@@ -10,8 +10,9 @@ export class Joltage {
   }
 
   capacity(take = 2) {
+    const firstDigit = this.firstDigit(take);
     let digits = [
-      this.firstDigit(take),
+      firstDigit,
       this.secondDigit(take)
     ];
 

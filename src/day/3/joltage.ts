@@ -31,8 +31,4 @@ export class Joltage {
   private firstDigit(take: number) {
     return Math.max(...this.bank.slice(0, this.bank.length - (take - 1)))
   }
-
-  private isLastOf(maxDigit: number) {
-    return this.bank.indexOf(maxDigit) === this.bank.length - 1;
-  }
 }

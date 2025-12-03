@@ -11,4 +11,11 @@ describe('The batter input', () => {
     expect(subject.banks()).toEqual([8,1,1,1,1,1,1,1,1,1,1,1,1,1,9]);
   });
 
+  describe('given multi-line input', () => {
+    it('re', () => {
+      
+    });
+
+  });
+
 });

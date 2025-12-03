@@ -26,12 +26,12 @@ describe('The ID validator', () => {
   });
 
   it('solves the example', () => {
-    const input = IdRangeInput.create(exampleInput, ',')
+    const input = IdRangeInput.create(exampleInput)
     expect(sum(invalidIDsIn(input.ranges()))).toEqual(4174379265)
   });
 
   it('solves the puzzle', () => {
-    const input = IdRangeInput.create(puzzleInput, ',')
+    const input = IdRangeInput.create(puzzleInput)
     expect(sum(invalidIDsIn(input.ranges()))).toEqual(40028128307)
   });
 

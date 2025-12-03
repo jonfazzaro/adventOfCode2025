@@ -23,6 +23,7 @@ describe('The joltage meter', () => {
       "818181911112111")
 
     const subject = Joltage.create();
+    
   });
 
 });

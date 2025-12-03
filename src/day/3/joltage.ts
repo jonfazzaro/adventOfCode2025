@@ -14,7 +14,7 @@ export class Joltage {
     const firstDigitIndex = this.bank.indexOf(this.firstDigit(take));
     let digits = [
       firstDigit,
-      this.secondDigit(take)
+      this.nextMax(firstDigitIndex)
     ];
 
 

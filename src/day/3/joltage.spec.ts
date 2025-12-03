@@ -2,10 +2,6 @@ import {Joltage} from "./joltage.ts";
 import {BatteryInput} from "./battery-input.ts";
 
 describe('The joltage meter', () => {
-  it('exists', () => {
-    expect(Joltage.create([])).toBeInstanceOf(Joltage);
-  });
-
   describe('given a bank of batteries', () => {
     it.each([
       ["0145671", 71],

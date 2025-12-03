@@ -1,5 +1,4 @@
 import {IdValidator} from "./id-validator.ts";
-import {Input} from "../../input.ts";
 import {IdRangeInput} from "./id-range.input.ts";
 
 describe('The ID validator', () => {

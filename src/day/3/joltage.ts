@@ -11,14 +11,16 @@ export class Joltage {
 
   capacity(take = 2) {
     const {value, index} = this.nextMaxAndIndex(0, take);
-    let digits = [
+    const digits = [
       value,
-      this.nextMaxAndIndex(index+1, take-1).value
+      this.nextMaxAndIndex(index + 1, take - 1).value
     ];
-let lastIndex = 0
+    let digits2 = []
+    let lastIndex = 0
     for (let i = 0; i < take; i++) {
-      const {value, index} = this.nextMaxAndIndex(lastIndex+1, take-i-1);
-      digits.push()
+      const {value, index} = this.nextMaxAndIndex(lastIndex + 1, take - i - 1);
+      lastIndex = index;
+      digits2.push(value);
     }
 
     return this.toNumber(digits)

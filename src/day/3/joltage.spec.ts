@@ -16,14 +16,17 @@ describe('The joltage meter', () => {
     });
   });
 
-  it('solves the example', () => {
+  it.skip('solves the example', () => {
     const input = BatteryInput.create("987654321111111\n" +
       "811111111111119\n" +
       "234234234234278\n" +
       "818181911112111")
 
     const subject = Joltage.create();
-    
-  });
+    expect(sum(input.banks().map(bank => subject.capacity(bank)))).toEqual(357)
 
+  });
+  function sum(input: number[]) {
+    return input.reduce((total, num) => total + num, 0);
+  }
 });

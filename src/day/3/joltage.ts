@@ -10,11 +10,6 @@ export class Joltage {
   }
 
   capacity(take = 2) {
-    const {value, index} = this.nextMaxAndIndex(0, take);
-    const digits = [
-      value,
-      this.nextMaxAndIndex(index + 1, take - 1).value
-    ];
 
     let digits2 = []
     let lastIndex = -1
@@ -23,9 +18,8 @@ export class Joltage {
       lastIndex = index;
       digits2.push(value);
     }
-    console.log(digits2)
 
-    return this.toNumber(digits)
+    return this.toNumber(digits2)
   }
 
   private toNumber(digits: number[]) {

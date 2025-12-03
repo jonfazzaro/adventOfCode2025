@@ -13,7 +13,7 @@ class IdRangeInput extends Input {
 
 describe('The ID range input', () => {
   it('should exist', () => {
-   expect(IdRangeInput.create()).toBeInstanceOf(Input);
+    expect(IdRangeInput.create()).toBeInstanceOf(Input);
   });
 
 });

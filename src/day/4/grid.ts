@@ -1,3 +1,5 @@
+import type {Point} from "./point.ts";
+
 const defaultValue = '.';
 
 export class Grid {

@@ -7,9 +7,8 @@ export class Grid {
     this.width = width;
     this.height = height;
 
-    for (let y = 0; y < height; y++) {
+    for (let y = 0; y < height; y++)
       this.cells.push(Array(width).fill('.').join(''));
-    }
   }
 
   static create(width: number, height: number) {

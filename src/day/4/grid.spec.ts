@@ -13,11 +13,8 @@ describe('The grid', () => {
       '..',
     ]]
   ])('has cells', (dimensions: number[], expected:string[]) => {
-    const grid = Grid.create(2, 2);
-    expect(grid.cells).toEqual([
-      '..',
-      '..',
-    ])
+    const grid = Grid.create(...dimensions);
+    expect(grid.cells).toEqual(expected)
   });
 
 });

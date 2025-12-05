@@ -26,7 +26,7 @@ export class Grid {
       x: 1, y: point.y, value: '.'
     }  }
 
-  westOf(x: number, y: number) {
+  westOf(point: Point) {
     return undefined;
   }
 }

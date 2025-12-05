@@ -24,7 +24,8 @@ export class Grid {
   eastOf(point: Point) {
     const east  = point.east()
     return {
-      x: 1, y: point.y, value: '.'
+      ...east,
+      value: '.'
     }  }
 
   westOf(point: Point) {

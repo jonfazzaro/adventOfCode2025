@@ -12,7 +12,7 @@ describe('The grid', () => {
       '..',
       '..',
     ]]
-  ])('has cells', (dimensions: Parameters<Grid['create']>, expected:string[]) => {
+  ])('has cells', (dimensions: Parameters<Grid.create>, expected:string[]) => {
     const grid = Grid.create(...dimensions);
     expect(grid.cells).toEqual(expected)
   });

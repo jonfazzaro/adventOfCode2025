@@ -30,6 +30,7 @@ describe('The grid', () => {
 
     describe('on the west edge', () => {
       let grid: Grid;
+
       beforeEach(() => {
         grid = Grid.create(5, 5);
       });
@@ -40,7 +41,6 @@ describe('The grid', () => {
         });
 
         it('has no neighbor to the west', () => {
-          const grid = Grid.create(5, 5);
           expect(grid.westOf(Point.create(0, 0))).toBeUndefined()
         });
 

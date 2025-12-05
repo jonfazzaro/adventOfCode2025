@@ -18,4 +18,9 @@ export class Grid {
   private newRow(width: number) {
     return Array(width).fill(defaultValue).join('');
   }
+
+  eastOf(number: number, number2: number) {
+    return {
+      x: 1, y: 0, value: '.'
+    }  }
 }

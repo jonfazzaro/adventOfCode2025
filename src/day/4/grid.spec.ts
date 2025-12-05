@@ -1,4 +1,5 @@
 import {Grid} from "./grid.ts";
+import {beforeAll} from "vitest";
 
 describe('The grid', () => {
   it('has a width and height', () => {
@@ -8,19 +9,39 @@ describe('The grid', () => {
   });
 
   it.each([
-    [[2,2], [
+    [[2, 2], [
       '..',
       '..',
     ]],
-    [[3,4], [
+    [[3, 4], [
       '...',
       '...',
       '...',
       '...',
     ]]
-  ])('has cells', ([width, height]: number[], expected:string[]) => {
+  ])('has cells', ([width, height]: number[], expected: string[]) => {
     const grid = Grid.create(width, height);
     expect(grid.cells).toEqual(expected)
+  });
+
+  describe('given a cell', () => {
+
+
+    describe('on the west edge', () => {
+      describe('at the north edge', () => {
+        it('has a neighbor to the east', () => {
+          const grid = Grid.create(5, 5);
+          expect(grid.eastOf(0,0)).toEqual({
+            x: 1, y: 0, value: '.'
+          })
+
+
+        });
+
+
+      });
+    });
+
   });
 
 });

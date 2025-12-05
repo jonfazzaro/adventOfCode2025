@@ -13,6 +13,6 @@ export class Point {
   }
 
   west() {
-
+return undefined
   }
 }

@@ -9,6 +9,6 @@ export class Point {
   }
 
   east() {
-    
+    return Point.create(this.x + 1, this.y);
   }
 }

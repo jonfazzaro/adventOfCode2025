@@ -11,6 +11,12 @@ describe('The grid', () => {
     [[2,2], [
       '..',
       '..',
+    ]],
+    [[3,4], [
+      '...',
+      '...',
+      '...',
+      '...',
     ]]
   ])('has cells', ([width, height]: number[], expected:string[]) => {
     const grid = Grid.create(width, height);

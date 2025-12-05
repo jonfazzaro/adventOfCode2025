@@ -1,18 +1,15 @@
-import {Cell} from "./cell.ts";
-
 export class Grid {
   public height: number;
   public width: number;
-  public cells: Array<Cell | undefined> = [];
+  public cells: Array<string> = [];
 
   constructor(width: number, height: number) {
     this.width = width;
     this.height = height;
 
+
     for (let y = 0; y < height; y++) {
-      for (let x = 0; x < width; x++) {
-        this.cells.push(Cell.create());
-      }
+      this.cells.push(Array(width).fill('.').join(''));
     }
   }
 

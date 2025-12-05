@@ -3,4 +3,8 @@ export class Point {
     public readonly x: number,
     public readonly y: number)
   { }
+
+  static create(x: number, y: number) {
+    return new Point(x, y);
+  }
 }

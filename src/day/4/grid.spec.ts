@@ -9,7 +9,11 @@ describe('The grid', () => {
 
   it('has cells', () => {
     const grid = Grid.create(2, 2);
-    expect(grid.cells.length).toEqual(4)
+    expect(grid.cells.flatMap(c => c).length).toEqual(4)
+
+
+
+
   });
 
 });

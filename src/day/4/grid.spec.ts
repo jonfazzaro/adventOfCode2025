@@ -5,7 +5,6 @@ class Point {
   constructor(x: number, y: number) {
 
   }
-
 }
 
 describe('The grid', () => {

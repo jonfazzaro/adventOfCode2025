@@ -7,7 +7,12 @@ describe('The grid', () => {
     expect(grid.height).toEqual(5);
   });
 
-  it('has cells', () => {
+  it.each([
+    [[2,2], [
+      '..',
+      '..',
+    ]]
+  ])('has cells', () => {
     const grid = Grid.create(2, 2);
     expect(grid.cells).toEqual([
       '..',

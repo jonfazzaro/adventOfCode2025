@@ -21,6 +21,6 @@ export class Grid {
 
   eastOf(x: number, y: number) {
     return {
-      x: 1, y: 0, value: '.'
+      x: 1, y, value: '.'
     }  }
 }

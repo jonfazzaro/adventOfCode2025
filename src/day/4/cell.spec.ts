@@ -1,9 +1,8 @@
-class Cell {
-}
+import {Cell} from "./cell.ts";
 
 describe('The grid cell', () => {
   it('should exist', () => {
-    new Cell()
+    expect(new Cell()).toBeInstanceOf(Cell);
   });
 
 });

@@ -6,7 +6,11 @@ export class Grid {
   constructor(width: number, height: number) {
     this.width = width;
     this.height = height;
-    this.cells = Array(height).fill(Array(width).fill('.').join(''));
+    this.cells = Array(height).fill(this.newRow(width));
+  }
+
+  private newRow(width: number) {
+    return Array(width).fill('.').join('');
   }
 
   static create(width: number, height: number) {

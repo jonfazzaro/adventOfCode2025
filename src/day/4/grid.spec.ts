@@ -31,8 +31,8 @@ describe('The grid', () => {
       describe('at the north edge', () => {
         it('has a neighbor to the east', () => {
           const grid = Grid.create(5, 5);
-          const location = new Point(0, 0);
-          expect(grid.eastOf(0,0)).toEqual({ x: 1, y: 0, value: '.' })
+          const point = new Point(0, 0);
+          expect(grid.eastOf(point)).toEqual({ x: 1, y: 0, value: '.' })
         });
 
         it('has no neighbor to the west', () => {

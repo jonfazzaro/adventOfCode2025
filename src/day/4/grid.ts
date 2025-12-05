@@ -19,9 +19,9 @@ export class Grid {
     return Array(width).fill(defaultValue).join('');
   }
 
-  eastOf(x: number, y: number) {
+  eastOf(point: Point) {
     return {
-      x: 1, y, value: '.'
+      x: 1, y: point.y, value: '.'
     }  }
 
   westOf(x: number, y: number) {

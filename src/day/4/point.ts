@@ -1,8 +1,8 @@
 export class Point {
   constructor(
     public readonly x: number,
-    public readonly y: number)
-  { }
+    public readonly y: number) {
+  }
 
   static create(x: number, y: number) {
     return new Point(x, y);
@@ -13,6 +13,6 @@ export class Point {
   }
 
   west() {
-return undefined
+    return undefined
   }
 }

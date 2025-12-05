@@ -23,4 +23,8 @@ export class Grid {
     return {
       x: 1, y, value: '.'
     }  }
+
+  westOf(number: number, number2: number) {
+    return undefined;
+  }
 }

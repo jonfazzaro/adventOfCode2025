@@ -34,6 +34,10 @@ describe('The grid', () => {
           expect(grid.eastOf(0,0)).toEqual({ x: 1, y: 0, value: '.' })
         });
 
+        it('has no neighbor to the west', () => {
+          const grid = Grid.create(5, 5);
+          expect(grid.westOf(0,0)).toBeUndefined()
+        });
 
       });
     });

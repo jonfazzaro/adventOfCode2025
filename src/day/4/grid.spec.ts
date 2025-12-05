@@ -36,7 +36,7 @@ describe('The grid', () => {
 
         it('has no neighbor to the west', () => {
           const grid = Grid.create(5, 5);
-          expect(grid.westOf(0,0)).toBeUndefined()
+          expect(grid.westOf(Point.create(0, 0))).toBeUndefined()
         });
 
       });

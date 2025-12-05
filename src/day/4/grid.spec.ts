@@ -1,11 +1,5 @@
 import {Grid} from "./grid.ts";
-import {beforeAll} from "vitest";
-
-class Point {
-  constructor(x: number, y: number) {
-
-  }
-}
+import {Point} from "./point.ts";
 
 describe('The grid', () => {
   it('has a width and height', () => {

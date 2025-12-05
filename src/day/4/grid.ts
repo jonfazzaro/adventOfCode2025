@@ -1,3 +1,5 @@
+const defaultValue = '.';
+
 export class Grid {
   public height: number;
   public width: number;
@@ -10,7 +12,7 @@ export class Grid {
   }
 
   private newRow(width: number) {
-    return Array(width).fill('.').join('');
+    return Array(width).fill(defaultValue).join('');
   }
 
   static create(width: number, height: number) {

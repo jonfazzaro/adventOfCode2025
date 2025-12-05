@@ -11,11 +11,11 @@ export class Grid {
     this.cells = Array(height).fill(this.newRow(width));
   }
 
-  private newRow(width: number) {
-    return Array(width).fill(defaultValue).join('');
-  }
-
   static create(width: number, height: number) {
     return new Grid(width, height);
+  }
+
+  private newRow(width: number) {
+    return Array(width).fill(defaultValue).join('');
   }
 }

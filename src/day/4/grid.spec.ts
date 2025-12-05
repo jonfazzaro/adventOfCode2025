@@ -5,4 +5,11 @@ describe('The grid', () => {
     expect(Grid.create()).toBeInstanceOf(Grid);
   });
 
+  it('has a width and height', () => {
+    const grid = Grid.create(3, 5);
+    expect(grid.width).toEqual(3);
+
+
+  });
+
 });

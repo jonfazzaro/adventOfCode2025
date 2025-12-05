@@ -7,4 +7,8 @@ export class Point {
   static create(x: number, y: number) {
     return new Point(x, y);
   }
+
+  east() {
+    
+  }
 }

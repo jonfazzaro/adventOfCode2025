@@ -7,4 +7,8 @@ describe('The grid', () => {
     expect(grid.height).toEqual(5);
   });
 
+  it('has cells', () => {
+    
+  });
+
 });

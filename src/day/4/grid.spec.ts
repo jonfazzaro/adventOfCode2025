@@ -9,6 +9,7 @@ describe('The grid', () => {
 
   it('has cells', () => {
     const grid = Grid.create(2, 2);
+    expect(grid.cells.length).toEqual(4)
   });
 
 });

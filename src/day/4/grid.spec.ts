@@ -1,6 +1,13 @@
 import {Grid} from "./grid.ts";
 import {beforeAll} from "vitest";
 
+class Point {
+  constructor(x: number, y: number) {
+
+  }
+
+}
+
 describe('The grid', () => {
   it('has a width and height', () => {
     const grid = Grid.create(3, 5);
@@ -31,6 +38,7 @@ describe('The grid', () => {
       describe('at the north edge', () => {
         it('has a neighbor to the east', () => {
           const grid = Grid.create(5, 5);
+          const location = new Point(0, 0);
           expect(grid.eastOf(0,0)).toEqual({ x: 1, y: 0, value: '.' })
         });
 

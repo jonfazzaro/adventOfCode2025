@@ -22,10 +22,8 @@ export class Grid {
   }
 
   eastOf(point: Point) {
-    return {
-      ...(point.east()),
-      value: '.'
-    }  }
+    return point.east();
+  }
 
   westOf(point: Point) {
     return undefined;

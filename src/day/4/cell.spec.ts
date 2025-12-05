@@ -5,5 +5,4 @@ describe('The grid cell', () => {
     const north = Cell.create();
     expect(Cell.create([north]).neighbors).toEqual([north])
   });
-
 });

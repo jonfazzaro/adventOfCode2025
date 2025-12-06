@@ -7,11 +7,13 @@ describe('The paper grid', () => {
     expect(PaperGrid.create(exampleInput.values)).toBeInstanceOf(Grid)
   });
 
-  describe.skip('given a roll of paper with fewer than four rolls of paper in the eight adjacent positions', () => {
+  describe.skip('given a roll of paper', () => {
 
-    it('can access the roll', () => {
+    it.each([
+      [3,0,true]
+    ])('can access the roll', (x:number, y:number, result:boolean) => {
       const grid = new PaperGrid(exampleInput.values);
-      expect(grid.canAccessRollAt(3,0)).toEqual(true)
+      expect(grid.canAccessRollAt(3,0)).toEqual(result)
     });
   });
 

@@ -34,10 +34,6 @@ describe('The grid', () => {
     expect(grid.neighborsOf(x, y)).toEqual(expected);
   });
 
-  it('', () => {
-    
-  });
-
 });
 
 const exampleInput = Input.create(

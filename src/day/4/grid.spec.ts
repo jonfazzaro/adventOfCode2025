@@ -9,7 +9,7 @@ describe('The grid', () => {
   });
 
   it.each([
-    [0, 0, "@"],
+    [0, 0, "."],
     [3, 0, "@"],
   ])('accesses the value at a location', (x: number, y: number, expected: string) => {
     const grid = Grid.create(exampleInput.values);

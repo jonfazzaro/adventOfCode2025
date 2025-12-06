@@ -1,8 +1,10 @@
 export class Grid {
   public height: number;
   public width: number;
+  private rows: string[];
 
   constructor(rows: string[]) {
+    this.rows = rows;
     this.width = rows[0].length;
     this.height = rows.length;
   }
@@ -12,6 +14,6 @@ export class Grid {
   }
 
   at(x: number, y: number) {
-    return "@";
+    return (this.rows)[0][x]
   }
 }

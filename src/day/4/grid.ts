@@ -14,6 +14,8 @@ export class Grid {
   }
 
   at(x: number, y: number) {
+    if (x < 0)
+      return "";
     return (this.rows)[y][x]
   }
 }

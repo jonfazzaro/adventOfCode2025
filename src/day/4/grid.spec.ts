@@ -18,7 +18,8 @@ describe('The grid', () => {
 
 });
 
-const exampleInput = Input.create("..@@.@@@@.\n" +
+const exampleInput = Input.create(
+  "..@@.@@@@.\n" +
   "@@@.@.@.@@\n" +
   "@@@@@.@.@@\n" +
   "@.@@@@..@.\n" +

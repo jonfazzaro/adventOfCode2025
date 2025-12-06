@@ -20,15 +20,6 @@ export class Grid {
   private newRow(width: number) {
     return Array(width).fill(defaultValue).join('');
   }
+  
 
-  eastOf(point: Point) {
-    return {
-      ...(point.east()),
-      value: '.'
-    }
-  }
-
-  westOf(point: Point) {
-    return point.west();
-  }
 }

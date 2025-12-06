@@ -11,6 +11,7 @@ describe('The paper grid', () => {
 
     it.each([
       [3, 0, true],
+      [0, 0, false],
     ])('determines access to the roll', (x: number, y: number, result: boolean) => {
       const grid = new PaperGrid(exampleInput.values);
       expect(grid.canAccessRollAt(x, y)).toEqual(result)

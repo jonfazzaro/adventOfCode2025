@@ -20,16 +20,8 @@ export class PaperGrid extends Grid {
   }
 
   accessibleRolls() {
-
     return this.points().filter(p =>
       this.canAccessRollAt(p.x, p.y));
-
-    //.map(y =>
-
-      // Array(this.width).map(x => ({
-      //     x, y
-      //   })
-      // ))
   }
 
   private points() {

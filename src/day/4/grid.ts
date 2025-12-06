@@ -14,8 +14,12 @@ export class Grid {
   }
 
   at(x: number, y: number) {
-    if (x < 0 || this.width <= x) return "";
+    if (this.isOutOfBoundsHorizontally(x)) return "";
 
     return (this.rows)[y][x]
+  }
+
+  private isOutOfBoundsHorizontally(x: number) {
+    return x < 0 || this.width <= x;
   }
 }

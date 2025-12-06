@@ -17,7 +17,6 @@ export class Grid {
     if (this.isOutOfBounds(x, y)) return "";
     return (this.rows)[y][x]
   }
-
   private isOutOfBounds = (x: number, y: number) =>
     this.isOutOfBoundsHorizontally(x) || this.isOutOfBoundsVertically(y);
   private isOutOfBoundsVertically = (y: number) =>

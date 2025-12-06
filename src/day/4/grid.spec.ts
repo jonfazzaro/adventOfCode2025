@@ -10,9 +10,9 @@ describe('The grid', () => {
 
   it.each([
     [0,0,"2"]
-  ])('accesses the value at a location', () => {
+  ])('accesses the value at a location', (x:number, y:number, expected: string) => {
     const grid = Grid.create(exampleInput.values);
-    expect(grid.at(0,0)).toEqual("@")
+    expect(grid.at(x,y)).toEqual("@")
   });
 
 });

@@ -24,6 +24,10 @@ describe('The paper grid', () => {
     expect(grid.accessibleRolls().length).toEqual(13)
   });
 
+  it('solves the puzzle', () => {
+    
+  });
+
 });
 
 const exampleInput = Input.create(

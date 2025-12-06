@@ -7,6 +7,13 @@ describe('The paper grid', () => {
     expect(new PaperGrid(exampleInput.values)).toBeInstanceOf(Grid)
   });
 
+  describe.skip('given a roll of paper with fewer than four rolls of paper in the eight adjacent positions', () => {
+
+    it('can access the roll', () => {
+
+    });
+  });
+
 });
 
 const exampleInput = Input.create(

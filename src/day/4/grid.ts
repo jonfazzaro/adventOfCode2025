@@ -1,6 +1,6 @@
 export class Grid {
-  public height: number;
-  public width: number;
+  private height: number;
+  private width: number;
   private rows: string[];
 
   constructor(rows: string[]) {

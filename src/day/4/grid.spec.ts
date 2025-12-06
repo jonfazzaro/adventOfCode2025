@@ -8,11 +8,13 @@ describe('The grid', () => {
     expect(grid.height).toEqual(10);
   });
 
-  it('accesses the value at a location', () => {
+  it.each([
+    [0,0,"2"]
+  ])('accesses the value at a location', () => {
     const grid = Grid.create(exampleInput.values);
     expect(grid.at(0,0)).toEqual("@")
-
   });
+
 });
 
 const exampleInput = Input.create("..@@.@@@@.\n" +

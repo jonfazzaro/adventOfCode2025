@@ -10,6 +10,8 @@ describe('The paper grid', () => {
   describe.skip('given a roll of paper with fewer than four rolls of paper in the eight adjacent positions', () => {
 
     it('can access the roll', () => {
+      const grid = new PaperGrid(exampleInput.values);
+      expect(grid.canAccessRollAt())
 
     });
   });

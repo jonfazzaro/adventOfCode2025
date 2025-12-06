@@ -12,7 +12,7 @@ export class PaperGrid extends Grid {
       .length < 4;
   }
 
-  private isPaperRoll() {
+  private isPaperRoll(): (c: string) => boolean {
     return (c: string) => c === "@";
   }
 }

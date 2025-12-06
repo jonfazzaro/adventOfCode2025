@@ -31,7 +31,7 @@ export class Grid {
   }
 
   private neighbors(x: number, y: number) {
-    const neighbors = {
+    return {
       north: this.at(x, y - 1),
       northeast: this.at(x + 1, y - 1),
       east: this.at(x + 1, y),
@@ -40,7 +40,6 @@ export class Grid {
       southwest: this.at(x - 1, y + 1),
       west: this.at(x - 1, y),
       northwest: this.at(x - 1, y - 1),
-    }
-    return neighbors;
+    };
   }
 }

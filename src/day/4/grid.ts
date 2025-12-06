@@ -36,6 +36,7 @@ export class Grid {
       west: this.at(x - 1, y),
       northwest: this.at(x - 1, y - 1),
     }
+    console.log(neighbors);
 
     return Object.values(neighbors).join('')
   }

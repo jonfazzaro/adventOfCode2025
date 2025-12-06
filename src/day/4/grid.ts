@@ -26,6 +26,12 @@ export class Grid {
     x < 0 || this.width <= x;
 
   neighborsOf(x: number, y: number) {
+    const neighbors = this.neighbors(x, y);
+
+    return Object.values(neighbors).join('')
+  }
+
+  private neighbors(x: number, y: number) {
     const neighbors = {
       north: this.at(x, y - 1),
       northeast: this.at(x + 1, y - 1),
@@ -36,7 +42,6 @@ export class Grid {
       west: this.at(x - 1, y),
       northwest: this.at(x - 1, y - 1),
     }
-
-    return Object.values(neighbors).join('')
+    return neighbors;
   }
 }

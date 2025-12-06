@@ -24,4 +24,7 @@ export class Grid {
   private isOutOfBoundsHorizontally = (x: number) =>
     x < 0 || this.width <= x;
 
+  neighborsOf(x: number, y: number) {
+    return "@@@@.@@@";
+  }
 }

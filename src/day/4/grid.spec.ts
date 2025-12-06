@@ -2,8 +2,13 @@ import {Grid} from "./grid.ts";
 import {Input} from "../../input.ts";
 
 describe('The grid', () => {
+  let grid: Grid;
+
+  beforeEach(() => {
+    grid = Grid.create(exampleInput.values);
+  });
+
   it('has a width and height', () => {
-    const grid = Grid.create(exampleInput.values);
     expect(grid.width).toEqual(10);
     expect(grid.height).toEqual(10);
   });
@@ -16,9 +21,14 @@ describe('The grid', () => {
     [10, 7, ""],
     [4, -1, ""],
     [4, 10, ""],
-  ])('accesses the value at (%d, %d)', (x: number, y: number, expected: string) => {
-    const grid = Grid.create(exampleInput.values);
+  ])('finds the value at (%d, %d) to be "%s"', (x: number, y: number, expected: string) => {
     expect(grid.at(x, y)).toEqual(expected);
+  });
+
+  it.each([
+    [4, 5, "@@@@.@@@"]
+  ])('lists the neighbors at (%d, %d) to be "%s"', (x: number, y: number, expected: string) => {
+    expect(grid.neighborsOf(x, y)).toEqual(expected);
   });
 
 });

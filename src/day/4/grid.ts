@@ -41,4 +41,11 @@ export class Grid {
       northwest: this.at(x - 1, y - 1),
     };
   }
+
+  protected points() {
+    return Array.from({length: this.height}).flatMap((_, y) =>
+      Array.from({length: this.width}).map((_, x) => ({
+        x, y
+      })));
+  }
 }

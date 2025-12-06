@@ -1,5 +1,4 @@
 import {Grid} from "./grid.ts";
-import {logDOM} from "@testing-library/react";
 
 export class PaperGrid extends Grid {
   constructor(rows: string[]) {
@@ -22,12 +21,5 @@ export class PaperGrid extends Grid {
   accessibleRolls() {
     return this.points().filter(p =>
       this.canAccessRollAt(p.x, p.y));
-  }
-
-  private points() {
-    return Array.from({length: this.height}).flatMap((_, y) =>
-      Array.from({length: this.width}).map((_, x) => ({
-        x, y
-      })));
   }
 }

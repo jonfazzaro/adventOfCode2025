@@ -27,7 +27,6 @@ export class Grid {
 
   neighborsOf(x: number, y: number) {
     const neighbors = this.neighbors(x, y);
-
     return Object.values(neighbors).join('')
   }
 

@@ -5,7 +5,7 @@ export class PaperGrid extends Grid {
     super(rows);
   }
 
-  canAccessRollAt(x: number, y: number) {
+  canAccessRollAt(x: number, y: number): boolean {
     return this.neighborsOf(x, y)
       .split('')
       .filter(this.isPaperRoll())

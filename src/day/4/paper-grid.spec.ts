@@ -4,7 +4,7 @@ import {PaperGrid} from "./paper-grid.ts";
 
 describe('The paper grid', () => {
   it('is a grid', () => {
-    expect(new PaperGrid(exampleInput.values)).toBeInstanceOf(Grid)
+    expect(PaperGrid.create(exampleInput.values)).toBeInstanceOf(Grid)
   });
 
   describe.skip('given a roll of paper with fewer than four rolls of paper in the eight adjacent positions', () => {

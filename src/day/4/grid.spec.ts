@@ -3,7 +3,7 @@ import {Input} from "../../input.ts";
 
 describe('The grid', () => {
   it('has a width and height', () => {
-    const input = Input.create("..@@.@@@@.\n" +
+    const exampleInput = Input.create("..@@.@@@@.\n" +
       "@@@.@.@.@@\n" +
       "@@@@@.@.@@\n" +
       "@.@@@@..@.\n" +
@@ -13,7 +13,7 @@ describe('The grid', () => {
       "@.@@@.@@@@\n" +
       ".@@@@@@@@.\n" +
       "@.@.@@@.@.")
-    const grid = Grid.create(input.values);
+    const grid = Grid.create(exampleInput.values);
     expect(grid.width).toEqual(10);
     expect(grid.height).toEqual(10);
   });

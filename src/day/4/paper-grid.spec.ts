@@ -7,7 +7,7 @@ describe('The paper grid', () => {
     expect(PaperGrid.create(exampleInput.values)).toBeInstanceOf(Grid)
   });
 
-  describe.skip('given a roll of paper', () => {
+  describe('given a roll of paper', () => {
 
     it.each([
       [3, 0, true],

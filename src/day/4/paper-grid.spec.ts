@@ -11,7 +11,7 @@ describe('The paper grid', () => {
 
     it('can access the roll', () => {
       const grid = new PaperGrid(exampleInput.values);
-      expect(grid.canAccessRollAt())
+      expect(grid.canAccessRollAt(3,0))
 
     });
   });

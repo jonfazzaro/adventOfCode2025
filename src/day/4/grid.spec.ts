@@ -10,6 +10,7 @@ describe('The grid', () => {
     [-1, 5, ""],
     [10, 7, ""],
     [4, -1, ""],
+    [4, 10, ""],
   ])('accesses the value at a location', (x: number, y: number, expected: string) => {
     const grid = Grid.create(exampleInput.values);
     expect(grid.at(x, y)).toEqual(expected);

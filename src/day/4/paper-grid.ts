@@ -6,6 +6,9 @@ export class PaperGrid extends Grid {
   }
 
   canAccessRollAt(x: number, y: number) {
-    return true;
+    return this.neighborsOf(x,y)
+      .split('')
+      .filter(c => c === "@")
+      .length < 4;
   }
 }

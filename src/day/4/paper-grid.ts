@@ -11,8 +11,8 @@ export class PaperGrid extends Grid {
       .filter(this.isPaperRoll())
       .length < 4;
   }
-  
+
   private isPaperRoll() {
-    return c => c === "@";
+    return (c: string) => c === "@";
   }
 }

@@ -9,7 +9,7 @@ class PaperGrid extends Grid {
 
 describe('The paper grid', () => {
   it('is a grid', () => {
-    expect(new PaperGrid(["", ""])).toBeInstanceOf(Grid)
+    expect(new PaperGrid([""])).toBeInstanceOf(Grid)
 
   });
 

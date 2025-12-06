@@ -5,4 +5,7 @@ export class PaperGrid extends Grid {
     super(rows);
   }
 
+  canAccessRollAt(number: number, number2: number) {
+    return true;
+  }
 }

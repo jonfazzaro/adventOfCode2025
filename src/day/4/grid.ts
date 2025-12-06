@@ -19,9 +19,7 @@ export class Grid {
     return (this.rows)[y][x]
   }
 
-  private isOutOfBounds(x: number, y: number) {
-    return this.isOutOfBoundsHorizontally(x) || this.isOutOfBoundsVertically(y);
-  }
+  private isOutOfBounds = (x: number, y: number) => this.isOutOfBoundsHorizontally(x) || this.isOutOfBoundsVertically(y);
 
   private isOutOfBoundsVertically(y: number) {
     return y < 0 || this.height <= y;

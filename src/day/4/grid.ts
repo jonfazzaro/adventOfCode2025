@@ -10,4 +10,8 @@ export class Grid {
   static create(rows: string[]) {
     return new Grid(rows);
   }
+
+  at(x: number, y: number) {
+    return "@";
+  }
 }

@@ -1,7 +1,3 @@
-import type {Point} from "./point.ts";
-
-const defaultValue = '.';
-
 export class Grid {
   public height: number;
   public width: number;

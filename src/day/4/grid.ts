@@ -7,7 +7,7 @@ export class Grid {
     this.height = rows.length;
   }
 
-  static create(width: number, height: number) {
-    return new Grid(width, height);
+  static create(rows: string[]) {
+    return new Grid(rows);
   }
 }

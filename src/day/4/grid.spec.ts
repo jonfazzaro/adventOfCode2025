@@ -9,7 +9,6 @@ describe('The grid', () => {
   });
 });
 
-
 const exampleInput = Input.create("..@@.@@@@.\n" +
   "@@@.@.@.@@\n" +
   "@@@@@.@.@@\n" +

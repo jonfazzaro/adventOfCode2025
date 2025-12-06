@@ -6,12 +6,12 @@ export class PaperGrid extends Grid {
   }
 
   canAccessRollAt(x: number, y: number) {
-    return this.neighbors(x, y)
+    return this.neighborsList(x, y)
       .filter(this.isPaperRoll())
       .length < 4;
   }
 
-  private neighbors(x: number, y: number) {
+  private neighborsList(x: number, y: number) {
     return this.neighborsOf(x, y)
       .split('');
   }

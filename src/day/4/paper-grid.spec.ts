@@ -1,9 +1,15 @@
-class PaperGrid {
+import {Grid} from "./grid.ts";
+
+class PaperGrid extends Grid {
+  constructor(rows:string[]) {
+    super(rows);
+  }
+
 }
 
 describe('The paper grid', () => {
   it('is a grid', () => {
-    new PaperGrid()
+    expect(new PaperGrid(["", ""])).toBeInstanceOf(Grid)
 
   });
 

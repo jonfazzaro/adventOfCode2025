@@ -26,7 +26,8 @@ describe('The grid', () => {
   });
 
   it.each([
-    [4, 5, "@@@@.@@@"]
+    [4, 5, "@@@@.@@@"],
+    [1, 6, "@@.@.@.."],
   ])('lists the neighbors at (%d, %d) to be "%s"', (x: number, y: number, expected: string) => {
     expect(grid.neighborsOf(x, y)).toEqual(expected);
   });

@@ -17,6 +17,7 @@ export class Grid {
     if (this.isOutOfBounds(x, y)) return "";
     return (this.rows)[y][x]
   }
+
   private isOutOfBounds = (x: number, y: number) =>
     this.isOutOfBoundsHorizontally(x) || this.isOutOfBoundsVertically(y);
   private isOutOfBoundsVertically = (y: number) =>
@@ -25,6 +26,17 @@ export class Grid {
     x < 0 || this.width <= x;
 
   neighborsOf(x: number, y: number) {
-    return "@@@@.@@@";
+    const neighbors = {
+      north: this.at(x, y - 1),
+      northeast: this.at(x + 1, y - 1),
+      east: this.at(x + 1, y),
+      southeast: this.at(x + 1, y + 1),
+      south: this.at(x, y + 1),
+      southwest: this.at(x - 1, y + 1),
+      west: this.at(x - 1, y),
+      northwest: this.at(x - 1, y - 1),
+    }
+
+    return Object.values(neighbors).join('')
   }
 }

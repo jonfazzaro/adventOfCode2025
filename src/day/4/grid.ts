@@ -14,6 +14,6 @@ export class Grid {
   }
 
   at(x: number, y: number) {
-    return (this.rows)[0][x]
+    return (this.rows)[y][x]
   }
 }

@@ -19,7 +19,7 @@ describe('The paper grid', () => {
     });
   });
 
-  it.only('solves the example', () => {
+  it('solves the example', () => {
     const grid = new PaperGrid(exampleInput.values);
     expect(grid.accessibleRolls().length).toEqual(13)
   });

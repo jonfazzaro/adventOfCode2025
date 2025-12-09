@@ -1,7 +1,7 @@
 export class Grid {
   public height: number;
   public width: number;
-  private rows: string[];
+  protected rows: string[];
 
   constructor(rows: string[]) {
     this.rows = rows;

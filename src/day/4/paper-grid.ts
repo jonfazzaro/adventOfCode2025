@@ -22,4 +22,8 @@ export class PaperGrid extends Grid {
     return this.points().filter(p =>
       this.canAccessRollAt(p.x, p.y));
   }
+
+  toString(): string {
+    return this.rows.join('\n')
+  }
 }

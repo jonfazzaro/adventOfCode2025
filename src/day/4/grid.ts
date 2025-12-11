@@ -19,7 +19,7 @@ export class Grid {
   }
 
   withRemoved(x: number, y: number) {
-    if (this.isOutOfBounds(x, y)) return "";
+    if (this.isOutOfBounds(x, y)) return this;
     return Grid.create([
       ...this.rows.slice(0, y),
       this.replaceChar(this.rows[y], '.', x),

@@ -49,7 +49,7 @@ describe('The grid', () => {
       "@.@.@@@.@.")
   });
 
-  it.only('removes a cell', () => {
+  it('removes a cell', () => {
     const grid = new Grid(exampleInput.values);
     expect(grid.withRemoved(2, 2).at(2, 2)).toEqual('.')
   });

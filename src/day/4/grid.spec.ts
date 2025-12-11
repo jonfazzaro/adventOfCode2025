@@ -35,7 +35,6 @@ describe('The grid', () => {
   });
 
   it('prints to a string', () => {
-    const grid = new Grid(exampleInput.values);
     expect(grid.toString()).toEqual("..@@.@@@@.\n" +
       "@@@.@.@.@@\n" +
       "@@@@@.@.@@\n" +
@@ -49,7 +48,6 @@ describe('The grid', () => {
   });
 
   it('removes a cell', () => {
-    const grid = new Grid(exampleInput.values);
     expect(grid.withRemoved(-1, 0).toString()).toEqual(grid.toString())
     expect(grid.withRemoved(2, 2).at(2, 2)).toEqual('.')
   });
@@ -58,7 +56,6 @@ describe('The grid', () => {
     [{x:-1, y:0}, ""],
     [{x:1, y:0}, "."],
   ])('removes multiple cells', (point: Point, expected: string) => {
-    const grid = new Grid(exampleInput.values);
     expect(grid.withManyRemoved([point]).at(point.x, point.y)).toEqual(expected)
   });
 

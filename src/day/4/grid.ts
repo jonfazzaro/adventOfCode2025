@@ -1,3 +1,5 @@
+export type Point = { x: number; y: number };
+
 export class Grid {
   public height: number;
   public width: number;
@@ -32,6 +34,7 @@ export class Grid {
     charArray[index] = newChar;
     return charArray.join("");
   }
+
   private isOutOfBounds = (x: number, y: number) =>
     this.isOutOfBoundsHorizontally(x) || this.isOutOfBoundsVertically(y);
   private isOutOfBoundsVertically = (y: number) =>
@@ -66,5 +69,9 @@ export class Grid {
 
   toString(): string {
     return this.rows.join('\n')
+  }
+
+  withManyRemoved(points: Point[]) {
+    return this;
   }
 }

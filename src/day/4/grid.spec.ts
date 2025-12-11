@@ -55,6 +55,20 @@ describe('The grid', () => {
   });
 
 
+  it('removes multiple cells', () => {
+    const grid = new Grid(exampleInput.values);
+    expect(grid.withManyRemoved([{x:-1, y:0}]).toString()).toEqual(
+      "..@@.@@@@.\n" +
+      "@@@.@.@.@@\n" +
+      "@@@@@.@.@@\n" +
+      "@.@@@@..@.\n" +
+      "@@.@@@@.@@\n" +
+      ".@@@@@@@.@\n" +
+      ".@.@.@.@@@\n" +
+      "@.@@@.@@@@\n" +
+      ".@@@@@@@@.\n" +
+      "@.@.@@@.@.");
+  });
 
 });
 

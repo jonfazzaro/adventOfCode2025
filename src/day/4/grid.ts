@@ -60,7 +60,7 @@ export class Grid {
     };
   }
 
-  protected points() {
+  protected points(): Point[] {
     return Array.from({length: this.height}).flatMap((_, y) =>
       Array.from({length: this.width}).map((_, x) => ({
         x, y

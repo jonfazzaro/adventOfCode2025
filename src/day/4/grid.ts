@@ -29,6 +29,19 @@ export class Grid {
     ]);
   }
 
+  neighborsOf(x: number, y: number) {
+    const neighbors = this.neighbors(x, y);
+    return Object.values(neighbors).join('')
+  }
+
+  withManyRemoved(points: Point[]) {
+    return this;
+  }
+
+  toString(): string {
+    return this.rows.join('\n')
+  }
+
   private replaceChar(originalString: string, newChar: string, index: number) {
     let charArray = originalString.split("");
     charArray[index] = newChar;
@@ -37,15 +50,12 @@ export class Grid {
 
   private isOutOfBounds = (x: number, y: number) =>
     this.isOutOfBoundsHorizontally(x) || this.isOutOfBoundsVertically(y);
+
   private isOutOfBoundsVertically = (y: number) =>
     y < 0 || this.height <= y;
+
   private isOutOfBoundsHorizontally = (x: number) =>
     x < 0 || this.width <= x;
-
-  neighborsOf(x: number, y: number) {
-    const neighbors = this.neighbors(x, y);
-    return Object.values(neighbors).join('')
-  }
 
   private neighbors(x: number, y: number) {
     return {
@@ -65,13 +75,5 @@ export class Grid {
       Array.from({length: this.width}).map((_, x) => ({
         x, y
       })));
-  }
-
-  toString(): string {
-    return this.rows.join('\n')
-  }
-
-  withManyRemoved(points: Point[]) {
-    return this;
   }
 }

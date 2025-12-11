@@ -30,7 +30,6 @@ describe('The paper grid', () => {
   });
 
   it('removes the accessible rolls', () => {
-
     const grid = new PaperGrid(exampleInput.values);
     expect(grid.toString()).toEqual(
       "..@@.@@@@.\n" +
@@ -43,7 +42,6 @@ describe('The paper grid', () => {
       "@.@@@.@@@@\n" +
       ".@@@@@@@@.\n" +
       "@.@.@@@.@.")
-
   });
 
 });

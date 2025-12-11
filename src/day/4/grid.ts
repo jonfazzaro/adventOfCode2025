@@ -21,9 +21,7 @@ export class Grid {
   withRemoved(x: number, y: number) {
     if (this.isOutOfBounds(x, y)) return "";
     const copyOfRows = [...this.rows];
-    console.log(copyOfRows[y])
     copyOfRows[y] = this.replaceChar(copyOfRows[y], '.', x);
-    console.log(copyOfRows[y])
     return Grid.create(copyOfRows);
   }
 

@@ -23,7 +23,8 @@ export class Grid {
     return Grid.create([
       ...this.rows.slice(0, y),
       this.replaceChar(this.rows[y], '.', x),
-      ...this.rows.slice(y + 1)]);
+      ...this.rows.slice(y + 1)
+    ]);
   }
 
   private replaceChar(originalString: string, newChar: string, index: number) {

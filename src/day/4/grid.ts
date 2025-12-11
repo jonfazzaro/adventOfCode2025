@@ -27,7 +27,7 @@ export class Grid {
     return Grid.create(copyOfRows);
   }
 
-  private replaceChar(originalString, newChar, index) {
+  private replaceChar(originalString: string, newChar: string, index: number) {
     let charArray = originalString.split("");
     charArray[index] = newChar;
     return charArray.join("");

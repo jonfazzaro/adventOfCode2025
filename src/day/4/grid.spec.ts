@@ -53,10 +53,10 @@ describe('The grid', () => {
   });
 
   it.each([
-    [{x:-1, y:0}, ""],
-    [{x:1, y:0}, "."],
-  ])('removes multiple cells', (point: Point, expected: string) => {
-    expect(grid.withManyRemoved([point]).at(point.x, point.y)).toEqual(expected)
+    [[{x:-1, y:0}], ""],
+    [[{x:1, y:0}], "."],
+  ])('removes multiple cells', (point: Point[], expected: string) => {
+    expect(grid.withManyRemoved(point).at(point[0].x, point[0].y)).toEqual(expected)
   });
 
 });

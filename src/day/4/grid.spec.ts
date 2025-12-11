@@ -1,6 +1,5 @@
 import {Grid} from "./grid.ts";
 import {Input} from "../../input.ts";
-import {PaperGrid} from "./paper-grid.ts";
 
 describe('The grid', () => {
   let grid: Grid;

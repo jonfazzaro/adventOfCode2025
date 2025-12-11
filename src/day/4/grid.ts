@@ -20,9 +20,7 @@ export class Grid {
 
   withRemoved(x: number, y: number) {
     if (this.isOutOfBounds(x, y)) return "";
-    const copyOfRows = [...this.rows];
-    copyOfRows[y] = this.replaceChar(copyOfRows[y], '.', x);
-    return Grid.create(copyOfRows);
+    return Grid.create([...this.rows.slice(0, y), this.replaceChar(this.rows[y], '.', x), ...this.rows.slice(y + 1)]);
   }
 
   private replaceChar(originalString: string, newChar: string, index: number) {

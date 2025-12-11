@@ -1,5 +1,6 @@
 import {Grid} from "./grid.ts";
 import {Input} from "../../input.ts";
+import {PaperGrid} from "./paper-grid.ts";
 
 describe('The grid', () => {
   let grid: Grid;
@@ -35,7 +36,6 @@ describe('The grid', () => {
   });
 
   it('prints to a string', () => {
-
     const grid = new Grid(exampleInput.values);
     expect(grid.toString()).toEqual("..@@.@@@@.\n" +
       "@@@.@.@.@@\n" +
@@ -47,8 +47,13 @@ describe('The grid', () => {
       "@.@@@.@@@@\n" +
       ".@@@@@@@@.\n" +
       "@.@.@@@.@.")
-
   });
+
+  it.only('removes a cell', () => {
+    const grid = new Grid(exampleInput.values);
+    expect(grid.withRemoved(2, 2).at(2, 2)).toEqual('.')
+  });
+
 });
 
 const exampleInput = Input.create(

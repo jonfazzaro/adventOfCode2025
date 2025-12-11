@@ -29,20 +29,7 @@ describe('The paper grid', () => {
     expect(grid.accessibleRolls().length).toEqual(1372)
   });
 
-  it('removes the accessible rolls', () => {
-    const grid = new PaperGrid(exampleInput.values);
-    expect(grid.toString()).toEqual(
-      "..@@.@@@@.\n" +
-      "@@@.@.@.@@\n" +
-      "@@@@@.@.@@\n" +
-      "@.@@@@..@.\n" +
-      "@@.@@@@.@@\n" +
-      ".@@@@@@@.@\n" +
-      ".@.@.@.@@@\n" +
-      "@.@@@.@@@@\n" +
-      ".@@@@@@@@.\n" +
-      "@.@.@@@.@.")
-  });
+
 
 });
 

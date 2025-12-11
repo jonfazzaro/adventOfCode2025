@@ -17,6 +17,15 @@ export class Grid {
     if (this.isOutOfBounds(x, y)) return "";
     return (this.rows)[y][x]
   }
+
+  withRemoved(x: number, y: number) {
+    if (this.isOutOfBounds(x, y)) return "";
+    const copyOfRows = [...this.rows];
+    console.log(copyOfRows[y])
+    copyOfRows[y] = copyOfRows[y].split('').toSpliced(x, 1, '.').join('');
+    console.log(copyOfRows[y])
+    return Grid.create(copyOfRows);
+  }
   private isOutOfBounds = (x: number, y: number) =>
     this.isOutOfBoundsHorizontally(x) || this.isOutOfBoundsVertically(y);
   private isOutOfBoundsVertically = (y: number) =>

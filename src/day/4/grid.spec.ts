@@ -54,7 +54,6 @@ describe('The grid', () => {
     expect(grid.withRemoved(2, 2).at(2, 2)).toEqual('.')
   });
 
-
   it.each([
     [-1, 0, ""],
     [1, 0, "."],

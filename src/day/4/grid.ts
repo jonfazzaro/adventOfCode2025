@@ -48,4 +48,8 @@ export class Grid {
         x, y
       })));
   }
+
+  toString(): string {
+    return this.rows.join('\n')
+  }
 }

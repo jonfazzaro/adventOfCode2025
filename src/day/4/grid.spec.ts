@@ -1,5 +1,6 @@
 import {Grid} from "./grid.ts";
 import {Input} from "../../input.ts";
+import {PaperGrid} from "./paper-grid.ts";
 
 describe('The grid', () => {
   let grid: Grid;
@@ -34,6 +35,21 @@ describe('The grid', () => {
     expect(grid.neighborsOf(x, y)).toEqual(expected);
   });
 
+  it('prints to a string', () => {
+
+    const grid = new Grid(exampleInput.values);
+    expect(grid.toString()).toEqual("..@@.@@@@.\n" +
+      "@@@.@.@.@@\n" +
+      "@@@@@.@.@@\n" +
+      "@.@@@@..@.\n" +
+      "@@.@@@@.@@\n" +
+      ".@@@@@@@.@\n" +
+      ".@.@.@.@@@\n" +
+      "@.@@@.@@@@\n" +
+      ".@@@@@@@@.\n" +
+      "@.@.@@@.@.")
+
+  });
 });
 
 const exampleInput = Input.create(

@@ -35,7 +35,7 @@ export class Grid {
   }
 
   withManyRemoved(points: Point[]) {
-    return this;
+    return this.withRemoved(points[0].x, points[0].y);
   }
 
   toString(): string {

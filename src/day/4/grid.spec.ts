@@ -1,4 +1,4 @@
-import {Grid} from "./grid.ts";
+import {Grid, type Point} from "./grid.ts";
 import {Input} from "../../input.ts";
 
 describe('The grid', () => {
@@ -55,12 +55,11 @@ describe('The grid', () => {
   });
 
   it.each([
-    // [-1, 0, ""],
-    [1, 0, "."],
-  ])('removes multiple cells', (x: number, y: number, expected: string) => {
+    [{x:-1, y:0}, ""],
+    [{x:1, y:0}, "."],
+  ])('removes multiple cells', (point: Point, expected: string) => {
     const grid = new Grid(exampleInput.values);
-    expect(grid.at(x, y)).toEqual(".")
-    expect(grid.withManyRemoved([{x,y}]).at(x, y)).toEqual(expected)
+    expect(grid.withManyRemoved([point]).at(point.x, point.y)).toEqual(expected)
   });
 
 });

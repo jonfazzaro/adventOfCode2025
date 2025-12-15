@@ -29,13 +29,13 @@ export class Grid {
     ]);
   }
 
+  withManyRemoved(points: Point[]) {
+    return points.reduce((g, p) => g.withRemoved(p.x, p.y), this as Grid);
+  }
+
   neighborsOf(x: number, y: number) {
     const neighbors = this.neighbors(x, y);
     return Object.values(neighbors).join('')
-  }
-
-  withManyRemoved(points: Point[]) {
-    return points.reduce((g, p) => g.withRemoved(p.x, p.y), this as Grid);
   }
 
   toString(): string {

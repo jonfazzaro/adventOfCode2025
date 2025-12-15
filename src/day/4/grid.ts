@@ -47,7 +47,6 @@ export class Grid {
     charArray[index] = newChar;
     return charArray.join("");
   }
-
   private isOutOfBounds = (x: number, y: number) =>
     this.isOutOfBoundsHorizontally(x) || this.isOutOfBoundsVertically(y);
 

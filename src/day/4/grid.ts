@@ -30,7 +30,7 @@ export class Grid {
   }
 
   withManyRemoved(points: Point[]) {
-    return points.reduce((g, p) => g.withRemoved(p.x, p.y), this as Grid);
+    return points.reduce((grid, point) => grid.withRemoved(point.x, point.y), this as Grid);
   }
 
   neighborsOf(x: number, y: number) {

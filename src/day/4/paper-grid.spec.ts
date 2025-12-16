@@ -33,11 +33,8 @@ describe('The paper grid', () => {
   describe('when solving part two', () => {
     it('solves the example', () => {
       let grid = new PaperGrid(exampleInput.values);
-      const count = grid.removeAllAccessibleRolls()
-
-      expect(count).toEqual(43)
+      expect(grid.removeAllAccessibleRolls()).toEqual(43)
     });
-
   });
 
 });

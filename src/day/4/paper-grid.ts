@@ -22,15 +22,10 @@ export class PaperGrid extends Grid {
     return this.points().filter(p =>
       this.canAccessRollAt(p.x, p.y));
   }
-
-  removeAccessibleRolls() {
-    return this.withManyRemoved(this.accessibleRolls());
-  }
-
   removeAllAccessibleRolls(count: number = 0): number {
     const accessibleRolls = this.accessibleRolls();
     if (!accessibleRolls.length) return count;
-    return this.removeAccessibleRolls()
+    return this.withManyRemoved(this.accessibleRolls())
       .removeAllAccessibleRolls(
         count + accessibleRolls.length
       );

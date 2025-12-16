@@ -35,6 +35,11 @@ describe('The paper grid', () => {
       let grid = new PaperGrid(exampleInput.values);
       expect(grid.removeAllAccessibleRolls()).toEqual(43)
     });
+
+    it('solves the puzzle', () => {
+      let grid = new PaperGrid(puzzleInput.values);
+      expect(grid.removeAllAccessibleRolls()).toEqual(7922)
+    });
   });
 
 });

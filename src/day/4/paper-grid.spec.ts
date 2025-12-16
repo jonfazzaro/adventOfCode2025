@@ -43,7 +43,7 @@ describe('The paper grid', () => {
         );
       }
 
-      const count = removeAllAccessibleRolls(grid);
+      const count = grid.removeAllAccessibleRolls()
 
       expect(count).toEqual(43)
     });

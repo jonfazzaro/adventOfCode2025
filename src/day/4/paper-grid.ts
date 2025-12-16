@@ -26,4 +26,5 @@ export class PaperGrid extends Grid {
   removeAccessibleRolls() {
     return this.withManyRemoved(this.accessibleRolls());
   }
+
 }

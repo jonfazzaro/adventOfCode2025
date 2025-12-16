@@ -31,7 +31,7 @@ describe('The paper grid', () => {
 
 
   describe('when solving part two', () => {
-    it.only('solves the example', () => {
+    it('solves the example', () => {
       let grid = new PaperGrid(exampleInput.values);
       let count = 0
       while(!!grid.accessibleRolls().length) {

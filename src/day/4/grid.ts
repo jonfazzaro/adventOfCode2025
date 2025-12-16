@@ -27,7 +27,11 @@ export class Grid {
       this.replaceChar(this.rows[y], '.', x),
       ...this.rows.slice(y + 1)
     ];
-    return this.create(rows);
+    return this.create([
+      ...this.rows.slice(0, y),
+      this.replaceChar(this.rows[y], '.', x),
+      ...this.rows.slice(y + 1)
+    ]);
   }
 
   private create(rows: string[]) {

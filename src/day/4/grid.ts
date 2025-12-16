@@ -12,7 +12,7 @@ export class Grid {
   }
 
   static create(rows: string[]) {
-    return new Grid(rows);
+    return new this(rows);
   }
 
   at(x: number, y: number) {
@@ -20,17 +20,17 @@ export class Grid {
     return (this.rows)[y][x]
   }
 
-  withRemoved(x: number, y: number) {
+  withRemoved(x: number, y: number): this {
     if (this.isOutOfBounds(x, y)) return this;
     return Grid.create([
       ...this.rows.slice(0, y),
       this.replaceChar(this.rows[y], '.', x),
       ...this.rows.slice(y + 1)
-    ]);
+    ]) as this;
   }
 
-  withManyRemoved(points: Point[]) {
-    return points.reduce((grid, point) => grid.withRemoved(point.x, point.y), this as Grid);
+  withManyRemoved(points: Point[]): Grid {
+    return points.reduce((grid: Grid, point) => grid.withRemoved(point.x, point.y), this);
   }
 
   neighborsOf(x: number, y: number) {

@@ -30,6 +30,21 @@ describe('The paper grid', () => {
   });
 
 
+  describe('when solving part two', () => {
+    it.only('solves the example', () => {
+      let grid = new PaperGrid(exampleInput.values);
+      let count = 0
+      while(!!grid.accessibleRolls().length) {
+        let accessibleRolls = grid.accessibleRolls();
+        count += accessibleRolls.length;
+        grid = grid.removeAccessibleRolls();
+        console.log({accessibleRolls, count, grid})
+      }
+
+      expect(count).toEqual(43)
+    });
+
+  });
 
 });
 

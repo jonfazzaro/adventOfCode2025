@@ -38,7 +38,6 @@ describe('The paper grid', () => {
         let accessibleRolls = grid.accessibleRolls();
         count += accessibleRolls.length;
         grid = grid.removeAccessibleRolls();
-        console.log({accessibleRolls, count, grid})
       }
 
       expect(count).toEqual(43)

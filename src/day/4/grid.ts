@@ -22,11 +22,6 @@ export class Grid {
 
   withRemoved(x: number, y: number): this {
     if (this.isOutOfBounds(x, y)) return this;
-    let rows = [
-      ...this.rows.slice(0, y),
-      this.replaceChar(this.rows[y], '.', x),
-      ...this.rows.slice(y + 1)
-    ];
     return this.create([
       ...this.rows.slice(0, y),
       this.replaceChar(this.rows[y], '.', x),

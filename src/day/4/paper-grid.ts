@@ -14,14 +14,11 @@ export class PaperGrid extends Grid {
       .length < 4;
   }
 
-  private isPaperRoll(value: string) {
-    return value === "@";
-  }
-
   accessibleRolls() {
     return this.points().filter(p =>
       this.canAccessRollAt(p.x, p.y));
   }
+
   removeAllAccessibleRolls(count: number = 0): number {
     const accessibleRolls = this.accessibleRolls();
     if (!accessibleRolls.length) return count;
@@ -29,5 +26,9 @@ export class PaperGrid extends Grid {
       .removeAllAccessibleRolls(
         count + accessibleRolls.length
       );
+  }
+
+  private isPaperRoll(value: string) {
+    return value === "@";
   }
 }

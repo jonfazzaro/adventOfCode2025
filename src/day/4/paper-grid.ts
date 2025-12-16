@@ -30,8 +30,9 @@ export class PaperGrid extends Grid {
   removeAllAccessibleRolls(count: number = 0): number {
     const accessibleRolls = this.accessibleRolls();
     if (!accessibleRolls.length) return count;
-    return this.removeAccessibleRolls().removeAllAccessibleRolls(
-      count + accessibleRolls.length
-    );
+    return this.removeAccessibleRolls()
+      .removeAllAccessibleRolls(
+        count + accessibleRolls.length
+      );
   }
 }

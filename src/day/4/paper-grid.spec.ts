@@ -34,16 +34,16 @@ describe('The paper grid', () => {
     it('solves the example', () => {
       let grid = new PaperGrid(exampleInput.values);
 
-      function countAccessibleRolls(grid: PaperGrid, count: number = 0): number {
+      function removeAllAccessibleRolls(grid: PaperGrid, count: number = 0): number {
         const accessibleRolls = grid.accessibleRolls();
         if (!accessibleRolls.length) return count;
-        return countAccessibleRolls(
+        return removeAllAccessibleRolls(
           grid.removeAccessibleRolls(),
           count + accessibleRolls.length
         );
       }
 
-      const count = countAccessibleRolls(grid);
+      const count = removeAllAccessibleRolls(grid);
 
       expect(count).toEqual(43)
     });

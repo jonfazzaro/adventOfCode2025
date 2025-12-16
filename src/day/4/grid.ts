@@ -29,10 +29,6 @@ export class Grid {
     ]);
   }
 
-  private create(rows: string[]) {
-    return (this.constructor as typeof Grid).create(rows) as this;
-  }
-
   withManyRemoved(points: Point[]): this {
     return points.reduce((grid: this, point) => grid.withRemoved(point.x, point.y), this);
   }
@@ -44,6 +40,10 @@ export class Grid {
 
   toString(): string {
     return this.rows.join('\n')
+  }
+
+  private create(rows: string[]) {
+    return (this.constructor as typeof Grid).create(rows) as this;
   }
 
   private replaceChar(originalString: string, newChar: string, index: number) {

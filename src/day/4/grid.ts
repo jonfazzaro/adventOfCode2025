@@ -22,11 +22,16 @@ export class Grid {
 
   withRemoved(x: number, y: number): this {
     if (this.isOutOfBounds(x, y)) return this;
-    return (this.constructor as typeof Grid).create([
+    let rows = [
       ...this.rows.slice(0, y),
       this.replaceChar(this.rows[y], '.', x),
       ...this.rows.slice(y + 1)
-    ]) as this;
+    ];
+    return this.create(rows);
+  }
+
+  private create(rows: string[]) {
+    return (this.constructor as typeof Grid).create(rows) as this;
   }
 
   withManyRemoved(points: Point[]): this {

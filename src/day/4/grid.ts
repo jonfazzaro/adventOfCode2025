@@ -11,8 +11,8 @@ export class Grid {
     this.height = rows.length;
   }
 
-  static create(rows: string[]) {
-    return new this(rows);
+  static create<T extends typeof Grid>(this: T, rows: string[]): InstanceType<T> {
+    return new this(rows) as InstanceType<T>;
   }
 
   at(x: number, y: number) {
@@ -22,15 +22,15 @@ export class Grid {
 
   withRemoved(x: number, y: number): this {
     if (this.isOutOfBounds(x, y)) return this;
-    return Grid.create([
+    return (this.constructor as typeof Grid).create([
       ...this.rows.slice(0, y),
       this.replaceChar(this.rows[y], '.', x),
       ...this.rows.slice(y + 1)
     ]) as this;
   }
 
-  withManyRemoved(points: Point[]): Grid {
-    return points.reduce((grid: Grid, point) => grid.withRemoved(point.x, point.y), this);
+  withManyRemoved(points: Point[]): this {
+    return points.reduce((grid: this, point) => grid.withRemoved(point.x, point.y), this);
   }
 
   neighborsOf(x: number, y: number) {
